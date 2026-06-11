@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-06-11 — Post-MVP: inbound Changi flights
+
+- AeroDataBox boards now fetched with `withLeg=true` for BOTH directions: each flight carries both ends' scheduled times, so inbound flights get their published origin departure time (no per-flight calls needed — 4 board calls total) and all entries get true scheduled durations instead of distance estimates.
+- Database: **1,058 flights (479 inbound to SIN) / 117 airports**. Verified live: BA11 LHR→SIN briefed with real GFS (19:25 origin-local auto-targeted).
+- Quota check: ~600 AeroDataBox api-units/month; a full refresh costs ~4-6 units.
+- 43/43 tests green over the full generated set.
+
 ## 2026-06-11 — Post-MVP: API keys approved (owner amendment to zero-key rule)
 
 - Owner approved credentials for LOCAL TOOLS ONLY (deployed app stays keyless apart from the already-sanctioned Upstash): `.env.local` carries RAPIDAPI_KEY + OPENSKY_CLIENT_ID/SECRET (verified live). `tools/env.ts` loader + `tools/opensky.ts` OAuth helper.
