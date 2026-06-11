@@ -9,6 +9,16 @@
     "operatingDays": [1, 2, 3, 4, 5, 6, 7],
     "verified": true
   },
+  "SQ660": {
+    "from": "SIN",
+    "to": "CTS",
+    "depLocal": "23:00",
+    "durationMin": 450,
+    "aircraft": "A350-900",
+    "widebody": true,
+    "operatingDays": [1, 2, 3, 4, 5, 6, 7],
+    "verified": false
+  },
   "SQ346": {
     "from": "SIN",
     "to": "ZRH",

@@ -23,6 +23,7 @@
   "ICN": { "code": "ICN", "lat": 37.469, "lon": 126.451, "city": "Seoul", "tz": "Asia/Seoul" },
   "NRT": { "code": "NRT", "lat": 35.772, "lon": 140.393, "city": "Tokyo", "tz": "Asia/Tokyo" },
   "HND": { "code": "HND", "lat": 35.549, "lon": 139.78, "city": "Tokyo", "tz": "Asia/Tokyo" },
+  "CTS": { "code": "CTS", "lat": 42.775, "lon": 141.692, "city": "Sapporo", "tz": "Asia/Tokyo" },
   "MNL": { "code": "MNL", "lat": 14.509, "lon": 121.02, "city": "Manila", "tz": "Asia/Manila" },
   "SYD": { "code": "SYD", "lat": -33.946, "lon": 151.177, "city": "Sydney", "tz": "Australia/Sydney" },
   "MEL": { "code": "MEL", "lat": -37.673, "lon": 144.843, "city": "Melbourne", "tz": "Australia/Melbourne" },
