@@ -6,7 +6,7 @@
  * Run:  npx tsx tools/validation/backtest.ts [--json]
  * Local-only; never deployed.
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import airportsJson from "../../src/lib/data/airports.json";
@@ -108,19 +108,37 @@ interface CaseResult {
   allS: number[];
 }
 
+/** Baked corridor for a case's flight, when one exists (Phase 5). */
+function loadBaked(flightNo?: string) {
+  if (!flightNo) return undefined;
+  const file = join(
+    dirname(fileURLToPath(import.meta.url)),
+    "../../src/lib/data/corridors",
+    flightNo + ".json",
+  );
+  if (!existsSync(file)) return undefined;
+  const baked = JSON.parse(readFileSync(file, "utf8")) as {
+    points: [number, number, number][];
+  };
+  return baked.points.map(([lat, lon, altFt]) => ({ lat, lon, altFt }));
+}
+
 async function runCase(
   id: string,
   type: "incident" | "smooth",
   route: CaseRoute,
   expectedRegions?: string[],
   expectedMechanism?: string,
+  bakedFlight?: string,
 ): Promise<CaseResult> {
   const fromAp = AIRPORTS[route.from];
   const toAp = AIRPORTS[route.to];
   const depUtcMs = utcFromLocal(route.date, route.depLocal, fromAp.tz);
-  const { wps } = buildCorridor(fromAp, toAp, depUtcMs, route.durationMin);
+  const baked = loadBaked(bakedFlight);
+  const { wps } = buildCorridor(fromAp, toAp, depUtcMs, route.durationMin, baked);
+  if (baked) console.error(`  ${id}: baked corridor (${bakedFlight})`);
   const wx = await fetchHistorical(wps, depUtcMs, depUtcMs + route.durationMin * 60e3);
-  const scores = wx.map(scoreWaypoint);
+  const scores = wx.map((s, i) => scoreWaypoint(s, wps[i].altFt));
   const zones = detectZones(wps, scores, route.widebody);
   const grade = gradeOf(zones, wps, route.widebody);
   const peakS = Math.max(0, ...scores.map((s) => s.S));
@@ -162,10 +180,26 @@ async function main() {
   const results: CaseResult[] = [];
   for (const c of incidents)
     results.push(
-      await runCase(c.id, "incident", c.route as CaseRoute, c.expectedRegions, c.expectedMechanism),
+      await runCase(
+        c.id,
+        "incident",
+        c.route as CaseRoute,
+        c.expectedRegions,
+        c.expectedMechanism,
+        (c as { bakedFlight?: string }).bakedFlight,
+      ),
     );
   for (const c of smoothCases)
-    results.push(await runCase(c.id, "smooth", c.route as CaseRoute));
+    results.push(
+      await runCase(
+        c.id,
+        "smooth",
+        c.route as CaseRoute,
+        undefined,
+        undefined,
+        (c as { bakedFlight?: string }).bakedFlight,
+      ),
+    );
 
   // table
   const wid = [22, 9, 34, 11, 7, 12];

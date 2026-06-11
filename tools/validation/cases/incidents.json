@@ -9,10 +9,15 @@
       "durationMin": 775,
       "widebody": true
     },
-    "expectedRegions": ["Irrawaddy", "Andaman", "Bay of Bengal"],
+    "expectedRegions": [
+      "Irrawaddy",
+      "Andaman",
+      "Bay of Bengal"
+    ],
     "expectedMechanism": "convection",
     "source": "SQ321 LHR-SIN severe turbulence ~07:49 UTC 2024-05-21 over southern Myanmar at cruise; widely attributed to convective activity; diverted to Bangkok.",
-    "uncertain": false
+    "uncertain": false,
+    "bakedFlight": "SQ321"
   },
   {
     "id": "QR017-2024-05-26",
@@ -24,7 +29,11 @@
       "durationMin": 470,
       "widebody": true
     },
-    "expectedRegions": ["Turkey", "Black Sea", "Mediterranean"],
+    "expectedRegions": [
+      "Turkey",
+      "Black Sea",
+      "Mediterranean"
+    ],
     "expectedMechanism": "jet shear",
     "source": "QR017 DOH-DUB turbulence over Turkey 2024-05-26, 12 injured; reported as clear-air encounter during service. Departure time approximate.",
     "uncertain": true

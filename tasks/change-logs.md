@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-06-11 — Phase 5: Accuracy (baked corridors + altitude-aware scoring)
+
+- `tools/corridor-baker/`: lib.ts (firstLeg cut, speed-aware glitch strip — naive distance filter cascaded after coverage gaps; resample-by-distance; per-index median; boundary-preserving altitude smoothing) + bake.ts (OpenSky anonymous fetch in ≤1-day windows, raw-track cache in input/ accumulates across days, user CSV/JSON floor, --from/--to override).
+- Baked `corridors/SQ345.json` (1 track, +2.1% vs GC) and `corridors/SQ321.json` (via SIA319 same city pair, +3.0%, 943 km southern deviation).
+- Pipeline: corridor.ts baked path = cumulative-distance timing + altFt; scoring.ts altitude-aware 300/250 vs 250/200 pair switch at config.highCruiseFt (32,000 ft), jet term stays ws250, undefined altFt bit-for-bit Phase-1; gh200 added to openmeteo/fixture/demo/backtest; payload + UI chip corridorSource; next.config traces corridors for serverless.
+- Tests 37/37 green (baker units, level switch, regression guard, baked-distance).
+- Backtest run 4: FA unchanged 2/13, p99 0.773→0.675; SQ321 GC HIT(light) → baked MISS (single-2026-track routing shifts signal to adjacent regions) — analyzed in calibration log.
+
 ## 2026-06-11 — Phase 4: Validation & calibration
 
 - `tools/validation/`: cases (2 incidents — SQ321, QR017; 13 smooth controls) + backtest.ts harness replaying the production pipeline against the Open-Meteo Historical Forecast API (429 retry + throttle; --json writes results/).

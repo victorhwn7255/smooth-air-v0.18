@@ -81,6 +81,32 @@ one class of ours? Transcribe conclusions only — no copied text or screenshots
 |---|---|---|---|---|
 | _(pending)_ | | | | |
 
+### Run 4 — Phase 5 baked corridors (SQ345 + SQ321 cases)
+
+Corridors baked from OpenSky anonymous tracks (1 track each — anonymous
+access only reaches ~1 day back; the input cache accumulates on reruns):
+SQ345 from 2026-06-10 SIA345 (+2.1% vs GC, max dev 442 km, FL 50–389),
+SQ321 from 2026-06-09 SIA319 (same LHR→SIN city pair; +3.0%, max dev 943 km —
+the Russia-avoiding southern routing).
+
+| metric | run 3 (GC) | run 4 (baked where available) |
+|---|---|---|
+| incident hit-rate light+ | 2/2 | **1/2** |
+| smooth false-alarm (mod+) | 2/13 (15%) | 2/13 (15%) |
+| S percentiles | 0.094/0.304/0.773 | 0.092/0.298/**0.675** |
+
+**SQ321 became an analyzed MISS on the baked corridor:** the single 2026
+track routes south of the Irrawaddy bounding box, so the flight-window
+convective signal appears in adjacent regions (Himalayan foothills 0.30 conv,
+Gulf of Thailand 0.31 conv) that don't match the expected keywords. Signal
+present, geography shifted — a one-track "median" is just that track, and
+2026 routing ≠ the 2024 incident routing. Non-baked cases are unchanged;
+altitude-aware scoring trimmed the saturated p99 (0.773 → 0.675) without
+moving the false-alarm rate.
+
+Action: accumulate more tracks (rerun the baker on later days; cache keeps
+them) before treating baked-corridor incident replays as authoritative.
+
 ### Open questions
 
 1. Both remaining mod+ "false alarms" are saturated subtropical-jet maxima

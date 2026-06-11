@@ -1,15 +1,147 @@
 [
-  { "id": "SQ345-2024-09-10", "route": { "from": "ZRH", "to": "SIN", "depLocal": "11:40", "date": "2024-09-10", "durationMin": 760, "widebody": true } },
-  { "id": "SQ345-2024-10-15", "route": { "from": "ZRH", "to": "SIN", "depLocal": "11:40", "date": "2024-10-15", "durationMin": 760, "widebody": true } },
-  { "id": "SQ346-2024-09-11", "route": { "from": "SIN", "to": "ZRH", "depLocal": "23:45", "date": "2024-09-11", "durationMin": 790, "widebody": true } },
-  { "id": "SQ346-2024-10-09", "route": { "from": "SIN", "to": "ZRH", "depLocal": "23:45", "date": "2024-10-09", "durationMin": 790, "widebody": true } },
-  { "id": "SIN-LHR-2024-09-17", "route": { "from": "SIN", "to": "LHR", "depLocal": "23:30", "date": "2024-09-17", "durationMin": 850, "widebody": true } },
-  { "id": "SIN-LHR-2024-10-08", "route": { "from": "SIN", "to": "LHR", "depLocal": "23:30", "date": "2024-10-08", "durationMin": 850, "widebody": true } },
-  { "id": "LHR-FRA-2024-09-12", "route": { "from": "LHR", "to": "FRA", "depLocal": "09:00", "date": "2024-09-12", "durationMin": 85, "widebody": false } },
-  { "id": "FRA-ZRH-2024-09-25", "route": { "from": "FRA", "to": "ZRH", "depLocal": "10:00", "date": "2024-09-25", "durationMin": 60, "widebody": false } },
-  { "id": "AMS-LHR-2024-10-02", "route": { "from": "AMS", "to": "LHR", "depLocal": "11:00", "date": "2024-10-02", "durationMin": 70, "widebody": false } },
-  { "id": "MUC-CDG-2024-09-18", "route": { "from": "MUC", "to": "CDG", "depLocal": "14:00", "date": "2024-09-18", "durationMin": 95, "widebody": false } },
-  { "id": "SIN-BKK-2024-09-05", "route": { "from": "SIN", "to": "BKK", "depLocal": "09:15", "date": "2024-09-05", "durationMin": 145, "widebody": false } },
-  { "id": "SIN-HKG-2024-10-22", "route": { "from": "SIN", "to": "HKG", "depLocal": "08:00", "date": "2024-10-22", "durationMin": 225, "widebody": true } },
-  { "id": "NRT-ICN-2024-09-24", "route": { "from": "NRT", "to": "ICN", "depLocal": "13:00", "date": "2024-09-24", "durationMin": 125, "widebody": false } }
+  {
+    "id": "SQ345-2024-09-10",
+    "route": {
+      "from": "ZRH",
+      "to": "SIN",
+      "depLocal": "11:40",
+      "date": "2024-09-10",
+      "durationMin": 760,
+      "widebody": true
+    },
+    "bakedFlight": "SQ345"
+  },
+  {
+    "id": "SQ345-2024-10-15",
+    "route": {
+      "from": "ZRH",
+      "to": "SIN",
+      "depLocal": "11:40",
+      "date": "2024-10-15",
+      "durationMin": 760,
+      "widebody": true
+    },
+    "bakedFlight": "SQ345"
+  },
+  {
+    "id": "SQ346-2024-09-11",
+    "route": {
+      "from": "SIN",
+      "to": "ZRH",
+      "depLocal": "23:45",
+      "date": "2024-09-11",
+      "durationMin": 790,
+      "widebody": true
+    }
+  },
+  {
+    "id": "SQ346-2024-10-09",
+    "route": {
+      "from": "SIN",
+      "to": "ZRH",
+      "depLocal": "23:45",
+      "date": "2024-10-09",
+      "durationMin": 790,
+      "widebody": true
+    }
+  },
+  {
+    "id": "SIN-LHR-2024-09-17",
+    "route": {
+      "from": "SIN",
+      "to": "LHR",
+      "depLocal": "23:30",
+      "date": "2024-09-17",
+      "durationMin": 850,
+      "widebody": true
+    }
+  },
+  {
+    "id": "SIN-LHR-2024-10-08",
+    "route": {
+      "from": "SIN",
+      "to": "LHR",
+      "depLocal": "23:30",
+      "date": "2024-10-08",
+      "durationMin": 850,
+      "widebody": true
+    }
+  },
+  {
+    "id": "LHR-FRA-2024-09-12",
+    "route": {
+      "from": "LHR",
+      "to": "FRA",
+      "depLocal": "09:00",
+      "date": "2024-09-12",
+      "durationMin": 85,
+      "widebody": false
+    }
+  },
+  {
+    "id": "FRA-ZRH-2024-09-25",
+    "route": {
+      "from": "FRA",
+      "to": "ZRH",
+      "depLocal": "10:00",
+      "date": "2024-09-25",
+      "durationMin": 60,
+      "widebody": false
+    }
+  },
+  {
+    "id": "AMS-LHR-2024-10-02",
+    "route": {
+      "from": "AMS",
+      "to": "LHR",
+      "depLocal": "11:00",
+      "date": "2024-10-02",
+      "durationMin": 70,
+      "widebody": false
+    }
+  },
+  {
+    "id": "MUC-CDG-2024-09-18",
+    "route": {
+      "from": "MUC",
+      "to": "CDG",
+      "depLocal": "14:00",
+      "date": "2024-09-18",
+      "durationMin": 95,
+      "widebody": false
+    }
+  },
+  {
+    "id": "SIN-BKK-2024-09-05",
+    "route": {
+      "from": "SIN",
+      "to": "BKK",
+      "depLocal": "09:15",
+      "date": "2024-09-05",
+      "durationMin": 145,
+      "widebody": false
+    }
+  },
+  {
+    "id": "SIN-HKG-2024-10-22",
+    "route": {
+      "from": "SIN",
+      "to": "HKG",
+      "depLocal": "08:00",
+      "date": "2024-10-22",
+      "durationMin": 225,
+      "widebody": true
+    }
+  },
+  {
+    "id": "NRT-ICN-2024-09-24",
+    "route": {
+      "from": "NRT",
+      "to": "ICN",
+      "depLocal": "13:00",
+      "date": "2024-09-24",
+      "durationMin": 125,
+      "widebody": false
+    }
+  }
 ]
