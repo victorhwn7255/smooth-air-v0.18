@@ -2,6 +2,7 @@
   "SIN": { "code": "SIN", "lat": 1.359, "lon": 103.989, "city": "Singapore", "tz": "Asia/Singapore" },
   "ZRH": { "code": "ZRH", "lat": 47.465, "lon": 8.549, "city": "Zurich", "tz": "Europe/Zurich" },
   "LHR": { "code": "LHR", "lat": 51.47, "lon": -0.454, "city": "London", "tz": "Europe/London" },
+  "DUB": { "code": "DUB", "lat": 53.421, "lon": -6.27, "city": "Dublin", "tz": "Europe/Dublin" },
   "FRA": { "code": "FRA", "lat": 50.038, "lon": 8.562, "city": "Frankfurt", "tz": "Europe/Berlin" },
   "CDG": { "code": "CDG", "lat": 49.01, "lon": 2.548, "city": "Paris", "tz": "Europe/Paris" },
   "AMS": { "code": "AMS", "lat": 52.31, "lon": 4.768, "city": "Amsterdam", "tz": "Europe/Amsterdam" },

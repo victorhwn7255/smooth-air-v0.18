@@ -45,10 +45,12 @@ describe("detectZones", () => {
 
 describe("classify widebody boundaries", () => {
   it("boundaries scale by ×1.2 for widebody", () => {
+    // boundary values updated deliberately for the Phase 4 recalibration
+    // (classModerate 0.22 → 0.50; see references/calibration-log.md)
     expect(classify(0.11, false)).toBe("light");
     expect(classify(0.11, true)).toBe("smooth"); // 0.11 < 0.10 × 1.2
-    expect(classify(0.23, false)).toBe("moderate");
-    expect(classify(0.23, true)).toBe("light"); // 0.23 < 0.22 × 1.2
+    expect(classify(0.55, false)).toBe("moderate");
+    expect(classify(0.55, true)).toBe("light"); // 0.55 < 0.50 × 1.2
     expect(classify(0.8, false)).toBe("severe");
     expect(classify(0.8, true)).toBe("moderate"); // 0.8 < 0.75 × 1.2
     expect(classify(0.95, true)).toBe("severe");

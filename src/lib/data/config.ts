@@ -34,8 +34,10 @@ export const config = {
   // so boundaries sit higher than raw-EDR convention; tuned in node tests
   /** S at or above this → light */
   classLight: 0.1,
-  /** S at or above this → moderate */
-  classModerate: 0.22,
+  /** S at or above this → moderate — Phase 4 backtest: v1's 0.22 was tuned
+   *  for the saturated pre-rescale S; with shearHi=0.02 ordinary jet
+   *  crossings peak 0.3–0.5, so moderate starts above that band */
+  classModerate: 0.5,
   /** S at or above this → severe */
   classSevere: 0.75,
   /** waypoints of smooth gap allowed inside a zone run */
