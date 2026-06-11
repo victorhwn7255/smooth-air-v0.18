@@ -140,6 +140,7 @@ export interface Briefing {
   briefing: string;
   /** true when demo data was used instead of live weather */
   demo: boolean;
+  dataSource: "gfs-openmeteo" | "demo";
   sigmet: SigmetStatus;
   /** UTC epoch ms when this briefing was generated */
   generatedAt: number;
