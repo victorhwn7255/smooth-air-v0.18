@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-06-11 — Phase 3: Frontend (Slock)
+
+- globals.css: Slock tokens as Tailwind 4 `@theme` (radius/text/weight/color/shadow namespaces reset and replaced per design-system §6). layout.tsx: Space Grotesk + Space Mono 400/700 via next/font.
+- Components: FlightForm (next-departure statement + change-date reveal, manual route mode, unverified-schedule note), GradeCard (accent-block grade, chip meta row), FlightRibbon (staggered ticks; in-band labels only on bands ≥10% wide — DECISION), ZoneCard (salmon-left thread card), BriefingProse (peach bubble), RouteTable (mono table, severity squares).
+- page.tsx: client orchestration, error/demo notices, footer disclaimer + attribution.
+- Verified: build + 27 tests green; Lighthouse accessibility 100; 14 headless-Chrome checks (sections render live, 360px no overflow, keyboard-only flow, demo banner, computed-style sweep: zero radius >0, zero blur, weights 400/700 only); contrast black-on-warning 10.23, black-on-error 5.04 — AA passes, no white-text deviation needed; visual side-by-side vs smoothair-slock.html.
+
 ## 2026-06-11 — Phase 2: Data sources + briefing API
 
 - `src/lib/sources/openmeteo.ts`: fetchWeather — GFS endpoint with full variable list (incl. 200 hPa pair), kn/unixtime/GMT, dep−1h…arr+2h window, ≤25-coordinate sequential chunks, defensive array-wrap, nearest-hour matching, `{ next: { revalidate: 21600 } }` data cache; throws typed WeatherUnavailableError.
