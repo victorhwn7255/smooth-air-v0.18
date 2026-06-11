@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-06-11 — Phase 4: Validation & calibration
+
+- `tools/validation/`: cases (2 incidents — SQ321, QR017; 13 smooth controls) + backtest.ts harness replaying the production pipeline against the Open-Meteo Historical Forecast API (429 retry + throttle; --json writes results/).
+- Added DUB to airports.json (QR017 case). 
+- Baseline (v1 constants): incidents 2/2 light+, smooth false-alarm mod+ 85%, S p99=1.0 (saturation).
+- Retuned one knob at a time: shearHi 0.013→0.020 (FA 69%), classModerate 0.22→0.50 (FA 15% — meets ≤~20% asymmetric target). Incidents stayed 2/2 light+. zones.test boundary expectations updated deliberately.
+- `references/calibration-log.md` created (runs, SQ321 analysis, open questions). NEEDS-HUMAN: Turbli eyeball comparison (site 403s automated clients) — instructions + blank table in the log.
+
 ## 2026-06-11 — Phase 3: Frontend (Slock)
 
 - globals.css: Slock tokens as Tailwind 4 `@theme` (radius/text/weight/color/shadow namespaces reset and replaced per design-system §6). layout.tsx: Space Grotesk + Space Mono 400/700 via next/font.
