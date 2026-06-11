@@ -1,0 +1,22 @@
+{
+  "SQ345": {
+    "from": "ZRH",
+    "to": "SIN",
+    "depLocal": "11:40",
+    "durationMin": 760,
+    "aircraft": "777-300ER",
+    "widebody": true,
+    "operatingDays": [1, 2, 3, 4, 5, 6, 7],
+    "verified": true
+  },
+  "SQ346": {
+    "from": "SIN",
+    "to": "ZRH",
+    "depLocal": "23:45",
+    "durationMin": 790,
+    "aircraft": "777-300ER",
+    "widebody": true,
+    "operatingDays": [1, 2, 3, 4, 5, 6, 7],
+    "verified": false
+  }
+}
