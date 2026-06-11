@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-06-11 — Phase 2: Data sources + briefing API
+
+- `src/lib/sources/openmeteo.ts`: fetchWeather — GFS endpoint with full variable list (incl. 200 hPa pair), kn/unixtime/GMT, dep−1h…arr+2h window, ≤25-coordinate sequential chunks, defensive array-wrap, nearest-hour matching, `{ next: { revalidate: 21600 } }` data cache; throws typed WeatherUnavailableError.
+- `src/lib/sources/sigmet.ts`: overlaySigmets — TURB/TS/CONV filter, point-in-polygon, ±1h slack, 5s AbortController timeout, never throws.
+- `src/lib/sources/demo.ts`: v1 demoWeather ported verbatim (mulberry32, jet/tropics belts); ws200/wd200 null (v1 didn't synthesize them).
+- `src/app/api/briefing/route.ts`: GET — flight ("sq 345" normalized) or manual from/to/time; missing date defaults to nextDeparture (DECISION); >120h → 422; demo fallback flagged, SIGMET skipped on demo; full Briefing payload + dataSource. types.ts: added `dataSource` to Briefing.
+- `tests/api.test.ts` + fixture: 6 cases (happy, OM-500→demo, SIGMET-abort→checked:false, 404, 422, 400). 27 tests green.
+- Live verification: real GFS briefing for SQ345 2026-06-12 — demo:false, 7 zones, maxS 1.0, maxVws 0.0178, sigmet checked; cache 2.1s → 0.07s.
+
 ## 2026-06-11 — Phase 1: Foundation (scaffold + pipeline port)
 
 - Initialized git repo (local only, never pushed) with baseline commit of docs/prompts/references.
