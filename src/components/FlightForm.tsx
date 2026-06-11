@@ -121,7 +121,7 @@ export default function FlightForm({
           {flight.verified === false && (
             <span className="text-text-secondary">
               {" "}
-              — schedule unverified, double-check
+              — departs {flight.depLocal}, still right? schedule unverified
             </span>
           )}{" "}
           {!showDate && (

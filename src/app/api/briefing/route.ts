@@ -27,6 +27,23 @@ const jsonError = (status: number, error: string) =>
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME_RE = /^\d{1,2}:\d{2}$/;
 
+// per-IP soft rate limit — protects the Open-Meteo free tier from a leaked
+// URL (hardening, not domain tuning; in-memory is fine at family scale)
+const RATE_MAX = 30; // briefings per hour per IP
+const buckets = new Map<string, { tokens: number; ts: number }>();
+function rateLimited(ip: string, now: number): boolean {
+  const b = buckets.get(ip) ?? { tokens: RATE_MAX, ts: now };
+  b.tokens = Math.min(RATE_MAX, b.tokens + ((now - b.ts) / 36e5) * RATE_MAX);
+  b.ts = now;
+  if (b.tokens < 1) {
+    buckets.set(ip, b);
+    return true;
+  }
+  b.tokens -= 1;
+  buckets.set(ip, b);
+  return false;
+}
+
 /** Baked corridor points for a flight, or undefined (great-circle fallback). */
 async function loadBakedCorridor(flightNo: string) {
   if (!flightNo) return undefined;
@@ -45,6 +62,14 @@ async function loadBakedCorridor(flightNo: string) {
 export async function GET(req: Request) {
   const sp = new URL(req.url).searchParams;
   const now = Date.now();
+
+  const ip =
+    (req.headers.get("x-forwarded-for") || "local").split(",")[0].trim();
+  if (rateLimited(ip, now))
+    return jsonError(
+      429,
+      "Easy there — more than 30 briefings in an hour. The forecast only updates every 6 hours anyway; try again soon.",
+    );
 
   // -- resolve route: known flight or manual from/to/time ------------------
   let flightNo = "";

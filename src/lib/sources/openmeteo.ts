@@ -24,6 +24,7 @@ const OM_VARS = [
 ].join(",");
 
 const CHUNK = 25; // Open-Meteo allows ≤25 comma-separated coordinates/request
+const TIMEOUT_MS = 10000;
 
 interface OmLocation {
   hourly: Record<string, (number | null)[]> & { time: number[] };
@@ -55,14 +56,21 @@ export async function fetchWeather(
       "&wind_speed_unit=kn&timeformat=unixtime&timezone=GMT" +
       `&start_date=${d0}&end_date=${d1}`;
     let json: unknown;
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
     try {
-      const r = await fetch(url, { next: { revalidate: 21600 } });
+      const r = await fetch(url, {
+        next: { revalidate: 21600 },
+        signal: ac.signal,
+      });
       if (!r.ok) throw new Error("Open-Meteo HTTP " + r.status);
       json = await r.json();
     } catch (e) {
       throw new WeatherUnavailableError(
         e instanceof Error ? e.message : String(e),
       );
+    } finally {
+      clearTimeout(timer);
     }
     const locs = (Array.isArray(json) ? json : [json]) as OmLocation[];
     locs.forEach((loc, k) => {

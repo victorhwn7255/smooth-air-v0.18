@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-06-11 — Phase 6: Ship (feedback loop + hardening; deploy NEEDS-HUMAN)
+
+- Feedback: `feedbackStore.ts` (file driver + Upstash REST driver by env presence, append-only), `POST /api/feedback` (validated, 503 friendly when storage unavailable), `GET /api/feedback/export` (?key= gate via FEEDBACK_EXPORT_KEY), one-tap FeedbackRow shown only for past departures, `.env.example` documenting the single permitted credential.
+- Hardening: per-IP token bucket on /api/briefing (30/h, verified 429 on request 31), 10s weather timeout via AbortController (SIGMET already 5s), `/api/health` (version+uptime), `error.tsx` calm failure state, stale-schedule prompt "departs 23:45, still right?" for unverified flights.
+- README rewritten for the finished app; `references/release-checklist.md` executed (3 human items open).
+- Verified live: health, feedback POST/export/validation, >120h refusal, rate limit, and 6 browser checks (stale prompt, feedback tap → thank-you → stored, no row for future departures, baked-route chip). 40/40 tests, build clean.
+- NEEDS-HUMAN: vercel login + deploy, Upstash env (optional), production cache check, README URL, Turbli comparison, SQ346 schedule verification, real-phone pass.
+
 ## 2026-06-11 — Phase 5: Accuracy (baked corridors + altitude-aware scoring)
 
 - `tools/corridor-baker/`: lib.ts (firstLeg cut, speed-aware glitch strip — naive distance filter cascaded after coverage gaps; resample-by-distance; per-index median; boundary-preserving altitude smoothing) + bake.ts (OpenSky anonymous fetch in ≤1-day windows, raw-track cache in input/ accumulates across days, user CSV/JSON floor, --from/--to override).
