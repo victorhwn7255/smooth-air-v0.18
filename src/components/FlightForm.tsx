@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import airportsJson from "@/lib/data/airports.json";
-import flightsJson from "@/lib/data/flights.json";
+import {
+  AIRPORTS,
+  CURATED_FLIGHT_NOS,
+  FLIGHTS,
+  GENERATED_FLIGHT_COUNT,
+} from "@/lib/data/flightDb";
 import { nextDeparture } from "@/lib/pipeline/timing";
-import type { Airport, FlightEntry } from "@/lib/types";
-
-const FLIGHTS = flightsJson as Record<string, FlightEntry>;
-const AIRPORTS = airportsJson as Record<string, Airport>;
+import type { FlightEntry } from "@/lib/types";
 
 export interface GenerateParams {
   flight?: string;
@@ -152,7 +153,10 @@ export default function FlightForm({
       )}
 
       <div className="mt-2.5 font-mono text-xs text-text-secondary">
-        Knows: {Object.keys(FLIGHTS).join(", ")} &nbsp;·&nbsp;{" "}
+        Knows: {CURATED_FLIGHT_NOS.join(", ")}
+        {GENERATED_FLIGHT_COUNT > 0 &&
+          ` + ${GENERATED_FLIGHT_COUNT} observed Changi flights`}{" "}
+        &nbsp;·&nbsp;{" "}
         <button type="button" className={ghostCls} onClick={onToggleManual}>
           enter a route manually
         </button>
@@ -167,11 +171,13 @@ export default function FlightForm({
               value={mFrom}
               onChange={(e) => setMFrom(e.target.value)}
             >
-              {Object.entries(AIRPORTS).map(([c, a]) => (
-                <option key={c} value={c}>
-                  {c} — {a.city}
-                </option>
-              ))}
+              {Object.entries(AIRPORTS)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([c, a]) => (
+                  <option key={c} value={c}>
+                    {c} — {a.city}
+                  </option>
+                ))}
             </select>
           </label>
           <label className={labelCls}>
@@ -181,11 +187,13 @@ export default function FlightForm({
               value={mTo}
               onChange={(e) => setMTo(e.target.value)}
             >
-              {Object.entries(AIRPORTS).map(([c, a]) => (
-                <option key={c} value={c}>
-                  {c} — {a.city}
-                </option>
-              ))}
+              {Object.entries(AIRPORTS)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([c, a]) => (
+                  <option key={c} value={c}>
+                    {c} — {a.city}
+                  </option>
+                ))}
             </select>
           </label>
           <label className={labelCls}>

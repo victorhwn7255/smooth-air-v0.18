@@ -20,7 +20,8 @@ export default function GradeCard({ b }: { b: Briefing }) {
     >
       <div className="mb-2.5 font-mono text-xs uppercase text-text-tertiary">
         {b.flightNo || "Route"} · {b.from} → {b.to} ·{" "}
-        {b.aircraft || "widebody assumed"} · {b.distanceKm.toLocaleString()} km
+        {b.aircraft || (b.widebody ? "widebody assumed" : "narrowbody assumed")}{" "}
+        · {b.distanceKm.toLocaleString()} km
         · {(b.durationMin / 60).toFixed(1)} h · {depDate} {b.depLocalTime}
       </div>
       <h2 className="text-3xl font-bold leading-tight">

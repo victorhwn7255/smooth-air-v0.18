@@ -56,6 +56,8 @@ Desktop.ini
 tools/corridor-baker/input/
 # generated backtest results (re-runnable; the calibration log in references/ IS tracked)
 tools/validation/results/
+# raw OpenSky/VRS/airport-dataset downloads for the Changi flight-db builder
+tools/flight-db/cache/
 # runtime feedback data when using the local file driver (Phase 6)
 src/lib/data/feedback.json
 

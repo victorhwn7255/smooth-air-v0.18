@@ -1,8 +1,12 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import airportsJson from "@/lib/data/airports.json";
-import flightsJson from "@/lib/data/flights.json";
 import { config } from "@/lib/data/config";
+import {
+  AIRPORTS,
+  CURATED_FLIGHT_NOS,
+  FLIGHTS,
+  GENERATED_FLIGHT_COUNT,
+} from "@/lib/data/flightDb";
 import { buildCorridor } from "@/lib/pipeline/corridor";
 import { gcKm } from "@/lib/pipeline/geo";
 import {
@@ -16,10 +20,7 @@ import { detectZones } from "@/lib/pipeline/zones";
 import { demoWeather } from "@/lib/sources/demo";
 import { fetchWeather, WeatherUnavailableError } from "@/lib/sources/openmeteo";
 import { overlaySigmets } from "@/lib/sources/sigmet";
-import type { Airport, Briefing, FlightEntry } from "@/lib/types";
-
-const FLIGHTS = flightsJson as Record<string, FlightEntry>;
-const AIRPORTS = airportsJson as Record<string, Airport>;
+import type { Briefing, FlightEntry } from "@/lib/types";
 
 const jsonError = (status: number, error: string) =>
   Response.json({ error }, { status });
@@ -85,7 +86,7 @@ export async function GET(req: Request) {
     if (!flight)
       return jsonError(
         404,
-        `Don't know ${fno} yet — add it to src/lib/data/flights.json. Known flights: ${Object.keys(FLIGHTS).join(", ")}.`,
+        `Don't know ${fno} yet — add it to src/lib/data/flights.json, or enter the route manually. Known: ${CURATED_FLIGHT_NOS.join(", ")}${GENERATED_FLIGHT_COUNT ? ` plus ${GENERATED_FLIGHT_COUNT} observed Changi flights` : ""}.`,
       );
     ({ from, to, depLocal, durationMin, aircraft, widebody } = flight);
     operatingDays = flight.operatingDays;
