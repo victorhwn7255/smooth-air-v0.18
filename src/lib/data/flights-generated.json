@@ -1,1 +1,5393 @@
-{}
+{
+ "2Y221": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "18:05",
+  "durationMin": 82,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "2Y923": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "20:25",
+  "durationMin": 102,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "3S531": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "16:40",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "3S539": {
+  "from": "SIN",
+  "to": "BAH",
+  "depLocal": "10:05",
+  "durationMin": 487,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "3U3910": {
+  "from": "SIN",
+  "to": "TFU",
+  "depLocal": "17:00",
+  "durationMin": 267,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "3U3920": {
+  "from": "SIN",
+  "to": "TFU",
+  "depLocal": "13:15",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5J536": {
+  "from": "SIN",
+  "to": "CRK",
+  "depLocal": "13:40",
+  "durationMin": 208,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5J548": {
+  "from": "SIN",
+  "to": "CEB",
+  "depLocal": "01:35",
+  "durationMin": 211,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5J804": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "01:10",
+  "durationMin": 208,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "5J806": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "18:10",
+  "durationMin": 208,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "5J818": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "23:10",
+  "durationMin": 208,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5X166": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "22:15",
+  "durationMin": 223,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5X167": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "08:50",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "5X168": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "15:25",
+  "durationMin": 82,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1002": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "04:40",
+  "durationMin": 246,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1004": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "22:20",
+  "durationMin": 246,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1006": {
+  "from": "SIN",
+  "to": "BLR",
+  "depLocal": "05:40",
+  "durationMin": 264,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1008": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "02:45",
+  "durationMin": 250,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1012": {
+  "from": "SIN",
+  "to": "BOM",
+  "depLocal": "19:45",
+  "durationMin": 317,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1014": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "19:45",
+  "durationMin": 334,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1016": {
+  "from": "SIN",
+  "to": "CCU",
+  "depLocal": "10:00",
+  "durationMin": 245,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1022": {
+  "from": "SIN",
+  "to": "BOM",
+  "depLocal": "10:45",
+  "durationMin": 317,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1024": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "05:55",
+  "durationMin": 250,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1026": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "11:10",
+  "durationMin": 246,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1028": {
+  "from": "SIN",
+  "to": "HYD",
+  "depLocal": "18:55",
+  "durationMin": 273,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1030": {
+  "from": "SIN",
+  "to": "VGA",
+  "depLocal": "06:10",
+  "durationMin": 255,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "6E1092": {
+  "from": "SIN",
+  "to": "BLR",
+  "depLocal": "19:40",
+  "durationMin": 264,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "7C2624": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "00:50",
+  "durationMin": 367,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "7C2662": {
+  "from": "SIN",
+  "to": "PUS",
+  "depLocal": "00:25",
+  "durationMin": 362,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "8B152": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "11:45",
+  "durationMin": 102,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "8B154": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "15:30",
+  "durationMin": 102,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "8B156": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "23:20",
+  "durationMin": 102,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "8B552": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "10:55",
+  "durationMin": 158,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "8B554": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "14:15",
+  "durationMin": 158,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "8K801": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "04:00",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "8M232": {
+  "from": "SIN",
+  "to": "RGN",
+  "depLocal": "13:50",
+  "durationMin": 176,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "8M234": {
+  "from": "SIN",
+  "to": "RGN",
+  "depLocal": "21:00",
+  "durationMin": 176,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "8M238": {
+  "from": "SIN",
+  "to": "RGN",
+  "depLocal": "04:30",
+  "durationMin": 176,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "9C7496": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "21:00",
+  "durationMin": 227,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AF181": {
+  "from": "SIN",
+  "to": "CDG",
+  "depLocal": "10:50",
+  "durationMin": 797,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "AF257": {
+  "from": "SIN",
+  "to": "CDG",
+  "depLocal": "22:20",
+  "durationMin": 797,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "AI2106": {
+  "from": "SIN",
+  "to": "BOM",
+  "depLocal": "08:45",
+  "durationMin": 317,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AI2116": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "13:10",
+  "durationMin": 334,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AI2119": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "10:30",
+  "durationMin": 334,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AI2381": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "08:25",
+  "durationMin": 334,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK1722": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "13:50",
+  "durationMin": 82,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK1724": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "17:35",
+  "durationMin": 82,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK1776": {
+  "from": "SIN",
+  "to": "KCH",
+  "depLocal": "11:45",
+  "durationMin": 90,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK700": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "07:55",
+  "durationMin": 61,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK702": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "09:10",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK704": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "10:20",
+  "durationMin": 61,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK705": {
+  "from": "KUL",
+  "to": "SIN",
+  "depLocal": "08:40",
+  "durationMin": 61,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "AK706": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "12:10",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK710": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "13:35",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK712": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "14:10",
+  "durationMin": 61,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK714": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "16:10",
+  "durationMin": 61,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK716": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "18:45",
+  "durationMin": 61,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AK718": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "20:45",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK720": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "21:20",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK722": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "23:25",
+  "durationMin": 61,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "AK733": {
+  "from": "SIN",
+  "to": "LGK",
+  "depLocal": "10:50",
+  "durationMin": 91,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "AY132": {
+  "from": "SIN",
+  "to": "HEL",
+  "depLocal": "21:35",
+  "durationMin": 695,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "BA12": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "23:20",
+  "durationMin": 808,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "BA15": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "20:20",
+  "durationMin": 484,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "BA16": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "22:40",
+  "durationMin": 808,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "BG585": {
+  "from": "SIN",
+  "to": "DAC",
+  "depLocal": "15:50",
+  "durationMin": 245,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "BI422": {
+  "from": "SIN",
+  "to": "BWN",
+  "depLocal": "12:10",
+  "durationMin": 130,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "BI424": {
+  "from": "SIN",
+  "to": "BWN",
+  "depLocal": "21:45",
+  "durationMin": 130,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "BR216": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "15:40",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "BR2202": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "08:20",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "BR6061": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "09:00",
+  "durationMin": 197,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "BS308": {
+  "from": "SIN",
+  "to": "DAC",
+  "depLocal": "05:40",
+  "durationMin": 245,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "BS310": {
+  "from": "SIN",
+  "to": "DAC",
+  "depLocal": "15:25",
+  "durationMin": 245,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "CA404": {
+  "from": "SIN",
+  "to": "TFU",
+  "depLocal": "16:00",
+  "durationMin": 267,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "CA490": {
+  "from": "SIN",
+  "to": "CKG",
+  "depLocal": "15:00",
+  "durationMin": 263,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "CA826": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "17:30",
+  "durationMin": 309,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CA890": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "17:55",
+  "durationMin": 357,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "CA970": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "23:25",
+  "durationMin": 357,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CA976": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "09:00",
+  "durationMin": 357,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CI6872": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "09:25",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CI6876": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "15:30",
+  "durationMin": 197,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CI754": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "13:45",
+  "durationMin": 267,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CI756": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "14:15",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CI758": {
+  "from": "SIN",
+  "to": "KHH",
+  "depLocal": "06:45",
+  "durationMin": 248,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CK288": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "15:35",
+  "durationMin": 197,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CX2074": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "15:55",
+  "durationMin": 82,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CX635": {
+  "from": "HKG",
+  "to": "SIN",
+  "depLocal": "15:20",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "CX636": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "20:05",
+  "durationMin": 221,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CX652": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "12:45",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CX658": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "09:45",
+  "durationMin": 221,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CX710": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "07:20",
+  "durationMin": 221,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CX714": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "01:45",
+  "durationMin": 221,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "CX716": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "18:00",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CX734": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "16:05",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CX758": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "13:25",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "CZ3040": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "17:50",
+  "durationMin": 227,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "CZ352": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "08:00",
+  "durationMin": 227,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "CZ354": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "13:45",
+  "durationMin": 227,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "CZ5086": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "05:10",
+  "durationMin": 223,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "CZ8048": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "20:50",
+  "durationMin": 223,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "CZ8118": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "13:25",
+  "durationMin": 223,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "CZ8490": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "03:55",
+  "durationMin": 227,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "EK315": {
+  "from": "SIN",
+  "to": "DXB",
+  "depLocal": "10:35",
+  "durationMin": 453,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "EK348": {
+  "from": "SIN",
+  "to": "KTI",
+  "depLocal": "15:40",
+  "durationMin": 119,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "EK349": {
+  "from": "SIN",
+  "to": "DXB",
+  "depLocal": "01:40",
+  "durationMin": 453,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "EK353": {
+  "from": "SIN",
+  "to": "DXB",
+  "depLocal": "00:50",
+  "durationMin": 453,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "ET638": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "15:50",
+  "durationMin": 61,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "ET639": {
+  "from": "SIN",
+  "to": "ADD",
+  "depLocal": "02:00",
+  "durationMin": 552,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "EY499": {
+  "from": "SIN",
+  "to": "AUH",
+  "depLocal": "21:00",
+  "durationMin": 455,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "FM844": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "03:25",
+  "durationMin": 309,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "FX5601": {
+  "from": "SIN",
+  "to": "ANC",
+  "depLocal": "17:25",
+  "durationMin": 797,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "FX6024": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "21:50",
+  "durationMin": 227,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "FX6067": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "19:00",
+  "durationMin": 117,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "FX6071": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "18:00",
+  "durationMin": 82,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "FX6124": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "10:05",
+  "durationMin": 227,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "FX6826": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "22:30",
+  "durationMin": 227,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "FY3681": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "22:55",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA823": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "18:00",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA825": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "09:35",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA829": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "12:25",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA833": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "15:45",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA837": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "19:45",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA839": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "21:45",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GA843": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "09:35",
+  "durationMin": 158,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "GF166": {
+  "from": "SIN",
+  "to": "BAH",
+  "depLocal": "20:00",
+  "durationMin": 487,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "GS7964": {
+  "from": "SIN",
+  "to": "KWE",
+  "depLocal": "15:35",
+  "durationMin": 239,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "HO1562": {
+  "from": "SIN",
+  "to": "WUX",
+  "depLocal": "04:35",
+  "durationMin": 306,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "HO1576": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "23:45",
+  "durationMin": 309,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "HO1602": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "16:10",
+  "durationMin": 309,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "HU448": {
+  "from": "SIN",
+  "to": "HAK",
+  "depLocal": "04:40",
+  "durationMin": 194,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "HU460": {
+  "from": "SIN",
+  "to": "HAK",
+  "depLocal": "16:25",
+  "durationMin": 194,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "HU748": {
+  "from": "SIN",
+  "to": "HAK",
+  "depLocal": "12:05",
+  "durationMin": 194,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "HU7910": {
+  "from": "SIN",
+  "to": "HAK",
+  "depLocal": "16:50",
+  "durationMin": 194,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7146": {
+  "from": "SIN",
+  "to": "KNO",
+  "depLocal": "14:00",
+  "durationMin": 84,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7150": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "16:15",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7152": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "21:30",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7154": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "11:30",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7156": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "14:45",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "ID7158": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "12:45",
+  "durationMin": 102,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "IP989": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "11:10",
+  "durationMin": 102,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "IX683": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "00:45",
+  "durationMin": 250,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "IX689": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "11:40",
+  "durationMin": 250,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "JL36": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "21:50",
+  "durationMin": 414,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "JL38": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "01:55",
+  "durationMin": 414,
+  "aircraft": "Boeing 767-300",
+  "widebody": true,
+  "verified": false
+ },
+ "JL712": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "08:05",
+  "durationMin": 418,
+  "aircraft": "Boeing 767-300",
+  "widebody": true,
+  "verified": false
+ },
+ "JQ8": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "21:00",
+  "durationMin": 466,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "JQ89": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "19:25",
+  "durationMin": 158,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "JQ98": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "02:40",
+  "durationMin": 316,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "JX772": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "14:00",
+  "durationMin": 267,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "KE344": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "09:30",
+  "durationMin": 367,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "KE644": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "22:00",
+  "durationMin": 367,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "KE646": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "01:25",
+  "durationMin": 367,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "KE648": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "07:30",
+  "durationMin": 367,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "KJ396": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "08:10",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "KL835": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "17:00",
+  "durationMin": 158,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "KL836": {
+  "from": "SIN",
+  "to": "AMS",
+  "depLocal": "00:55",
+  "durationMin": 782,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "KR9756": {
+  "from": "SIN",
+  "to": "SYX",
+  "depLocal": "17:00",
+  "durationMin": 179,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "KZ263": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "06:45",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "LD326": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "21:45",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "LH769": {
+  "from": "SIN",
+  "to": "MUC",
+  "depLocal": "22:45",
+  "durationMin": 750,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "LH781": {
+  "from": "SIN",
+  "to": "FRA",
+  "depLocal": "23:40",
+  "durationMin": 766,
+  "aircraft": "Boeing 747-400",
+  "widebody": true,
+  "verified": false
+ },
+ "LX176": {
+  "from": "ZRH",
+  "to": "SIN",
+  "depLocal": "22:50",
+  "durationMin": 767,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "LX177": {
+  "from": "SIN",
+  "to": "ZRH",
+  "depLocal": "23:25",
+  "durationMin": 767,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "MF8020": {
+  "from": "SIN",
+  "to": "JJN",
+  "depLocal": "14:15",
+  "durationMin": 255,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MF852": {
+  "from": "SIN",
+  "to": "XMN",
+  "depLocal": "15:15",
+  "durationMin": 251,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MF866": {
+  "from": "SIN",
+  "to": "FOC",
+  "depLocal": "15:05",
+  "durationMin": 266,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "MF8676": {
+  "from": "SIN",
+  "to": "XMN",
+  "depLocal": "03:35",
+  "durationMin": 251,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "MF8704": {
+  "from": "SIN",
+  "to": "HGH",
+  "depLocal": "14:50",
+  "durationMin": 298,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MF886": {
+  "from": "SIN",
+  "to": "XMN",
+  "depLocal": "08:55",
+  "durationMin": 251,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH602": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "06:20",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH604": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "09:55",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH606": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "13:40",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH608": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "18:15",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH610": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "21:25",
+  "durationMin": 61,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "MH614": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "11:05",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH616": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "19:15",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH620": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "16:35",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH624": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "15:35",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MH628": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "12:15",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MM774": {
+  "from": "SIN",
+  "to": "KIX",
+  "depLocal": "01:25",
+  "durationMin": 386,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MU2070": {
+  "from": "SIN",
+  "to": "XIY",
+  "depLocal": "14:00",
+  "durationMin": 302,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MU2578": {
+  "from": "SIN",
+  "to": "WUH",
+  "depLocal": "15:10",
+  "durationMin": 283,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MU5032": {
+  "from": "SIN",
+  "to": "PKX",
+  "depLocal": "01:10",
+  "durationMin": 352,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "MU5082": {
+  "from": "SIN",
+  "to": "KMG",
+  "depLocal": "12:40",
+  "durationMin": 226,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "MU544": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "00:55",
+  "durationMin": 309,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "MU546": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "10:10",
+  "durationMin": 309,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "MU566": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "23:10",
+  "durationMin": 309,
+  "aircraft": "Airbus A330-200",
+  "widebody": true,
+  "verified": false
+ },
+ "MU568": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "16:55",
+  "durationMin": 309,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "MU6050": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "18:25",
+  "durationMin": 309,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MU770": {
+  "from": "SIN",
+  "to": "HFE",
+  "depLocal": "15:45",
+  "durationMin": 299,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MU882": {
+  "from": "SIN",
+  "to": "KHN",
+  "depLocal": "03:10",
+  "durationMin": 274,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "MU9648": {
+  "from": "SIN",
+  "to": "KMG",
+  "depLocal": "02:30",
+  "durationMin": 226,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "NH802": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "06:15",
+  "durationMin": 418,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "NH842": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "11:05",
+  "durationMin": 414,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "NH844": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "22:00",
+  "durationMin": 414,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "NQ802": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "06:25",
+  "durationMin": 418,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "NX907": {
+  "from": "SIN",
+  "to": "MFM",
+  "depLocal": "17:05",
+  "durationMin": 219,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "NZ281": {
+  "from": "SIN",
+  "to": "AKL",
+  "depLocal": "08:35",
+  "durationMin": 634,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "NZ283": {
+  "from": "SIN",
+  "to": "AKL",
+  "depLocal": "18:45",
+  "durationMin": 634,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "O3302": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "03:30",
+  "durationMin": 223,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "OD802": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "10:20",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "OD804": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "12:30",
+  "durationMin": 61,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "OD806": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "21:30",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "OD807": {
+  "from": "KUL",
+  "to": "SIN",
+  "depLocal": "16:55",
+  "durationMin": 61,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "OD808": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "17:00",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "OD811": {
+  "from": "SIN",
+  "to": "SZB",
+  "depLocal": "10:00",
+  "durationMin": 64,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "OQ2096": {
+  "from": "SIN",
+  "to": "CKG",
+  "depLocal": "14:35",
+  "durationMin": 263,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "OZ752": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "22:50",
+  "durationMin": 367,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "PG962": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "20:15",
+  "durationMin": 111,
+  "aircraft": "Airbus A319",
+  "widebody": false,
+  "verified": false
+ },
+ "PG968": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "17:20",
+  "durationMin": 111,
+  "aircraft": "Airbus A319",
+  "widebody": false,
+  "verified": false
+ },
+ "PR502": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "10:05",
+  "durationMin": 208,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "PR508": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "14:30",
+  "durationMin": 208,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "PR510": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "00:35",
+  "durationMin": 208,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "PR512": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "08:50",
+  "durationMin": 208,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "PX393": {
+  "from": "SIN",
+  "to": "POM",
+  "depLocal": "20:40",
+  "durationMin": 388,
+  "aircraft": "Boeing 767-300",
+  "widebody": true,
+  "verified": false
+ },
+ "QF1": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "23:20",
+  "durationMin": 808,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "QF2": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "19:30",
+  "durationMin": 484,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "QF219": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "21:50",
+  "durationMin": 808,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "QF255": {
+  "from": "SIN",
+  "to": "CDG",
+  "depLocal": "22:35",
+  "durationMin": 797,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "QF256": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "06:20",
+  "durationMin": 484,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "QF36": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "20:15",
+  "durationMin": 466,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "QF38": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "23:30",
+  "durationMin": 466,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "QF48": {
+  "from": "SIN",
+  "to": "DRW",
+  "depLocal": "22:05",
+  "durationMin": 276,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "QF52": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "20:30",
+  "durationMin": 474,
+  "aircraft": "Airbus A330-200",
+  "widebody": true,
+  "verified": false
+ },
+ "QF54": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "23:20",
+  "durationMin": 474,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "QF72": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "19:35",
+  "durationMin": 316,
+  "aircraft": "Airbus A330-200",
+  "widebody": true,
+  "verified": false
+ },
+ "QF7536": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "11:15",
+  "durationMin": 484,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "QF78": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "10:30",
+  "durationMin": 316,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "QF82": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "21:00",
+  "durationMin": 484,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "QF8741": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "02:00",
+  "durationMin": 267,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "QG523": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "10:10",
+  "durationMin": 102,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "QG527": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "21:00",
+  "durationMin": 102,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "QR8408": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "14:35",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "QR943": {
+  "from": "SIN",
+  "to": "DOH",
+  "depLocal": "19:00",
+  "durationMin": 478,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "QR947": {
+  "from": "SIN",
+  "to": "DOH",
+  "depLocal": "01:30",
+  "durationMin": 478,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "QZ265": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "15:05",
+  "durationMin": 102,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "RH372": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "03:55",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SB741": {
+  "from": "SIN",
+  "to": "NOU",
+  "depLocal": "11:10",
+  "durationMin": 550,
+  "aircraft": "Airbus A330-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SC8062": {
+  "from": "SIN",
+  "to": "TNA",
+  "depLocal": "01:30",
+  "durationMin": 335,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SL101": {
+  "from": "SIN",
+  "to": "DMK",
+  "depLocal": "12:10",
+  "durationMin": 142,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "SL105": {
+  "from": "SIN",
+  "to": "DMK",
+  "depLocal": "21:55",
+  "durationMin": 142,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ104": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "07:00",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ106": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "08:25",
+  "durationMin": 61,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ108": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "09:10",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ114": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "12:25",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ116": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "14:30",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ12": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "09:25",
+  "durationMin": 418,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ122": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "16:20",
+  "durationMin": 61,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ126": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "18:30",
+  "durationMin": 61,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ128": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "20:00",
+  "durationMin": 61,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ132": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "08:00",
+  "durationMin": 82,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ134": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "09:35",
+  "durationMin": 82,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ136": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "13:00",
+  "durationMin": 82,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ138": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "15:55",
+  "durationMin": 82,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ142": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "19:10",
+  "durationMin": 82,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ148": {
+  "from": "SIN",
+  "to": "BWN",
+  "depLocal": "12:40",
+  "durationMin": 130,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ154": {
+  "from": "SIN",
+  "to": "KTI",
+  "depLocal": "07:40",
+  "durationMin": 119,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ156": {
+  "from": "SIN",
+  "to": "KTI",
+  "depLocal": "12:25",
+  "durationMin": 119,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ158": {
+  "from": "SIN",
+  "to": "KTI",
+  "depLocal": "16:30",
+  "durationMin": 119,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ164": {
+  "from": "SIN",
+  "to": "SAI",
+  "depLocal": "08:25",
+  "durationMin": 134,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ166": {
+  "from": "SIN",
+  "to": "SAI",
+  "depLocal": "13:50",
+  "durationMin": 134,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ172": {
+  "from": "SIN",
+  "to": "DAD",
+  "depLocal": "09:15",
+  "durationMin": 160,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ174": {
+  "from": "SIN",
+  "to": "DAD",
+  "depLocal": "14:00",
+  "durationMin": 160,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ178": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "09:40",
+  "durationMin": 117,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ184": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "13:30",
+  "durationMin": 117,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ186": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "17:15",
+  "durationMin": 117,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ192": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "09:00",
+  "durationMin": 197,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ194": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "15:00",
+  "durationMin": 197,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ196": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "12:10",
+  "durationMin": 197,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ203": {
+  "from": "SIN",
+  "to": "CNS",
+  "depLocal": "08:30",
+  "durationMin": 394,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ207": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "07:50",
+  "durationMin": 466,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ211": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "09:35",
+  "durationMin": 484,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ213": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "07:15",
+  "durationMin": 316,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ215": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "18:45",
+  "durationMin": 316,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ217": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "11:10",
+  "durationMin": 466,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ22": {
+  "from": "SIN",
+  "to": "EWR",
+  "depLocal": "23:35",
+  "durationMin": 1123,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ221": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "20:25",
+  "durationMin": 484,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ223": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "09:30",
+  "durationMin": 316,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ225": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "00:10",
+  "durationMin": 316,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ227": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "22:10",
+  "durationMin": 466,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ231": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "00:45",
+  "durationMin": 484,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ235": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "21:35",
+  "durationMin": 474,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ237": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "01:45",
+  "durationMin": 466,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ24": {
+  "from": "SIN",
+  "to": "JFK",
+  "depLocal": "12:10",
+  "durationMin": 1123,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ241": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "07:15",
+  "durationMin": 484,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ245": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "09:55",
+  "durationMin": 474,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ247": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "19:20",
+  "durationMin": 466,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ251": {
+  "from": "SIN",
+  "to": "DRW",
+  "depLocal": "18:40",
+  "durationMin": 276,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ253": {
+  "from": "SIN",
+  "to": "DRW",
+  "depLocal": "08:50",
+  "durationMin": 276,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ255": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "00:45",
+  "durationMin": 474,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ26": {
+  "from": "SIN",
+  "to": "FRA",
+  "depLocal": "23:55",
+  "durationMin": 766,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ265": {
+  "from": "SIN",
+  "to": "BNE",
+  "depLocal": "07:20",
+  "durationMin": 474,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ277": {
+  "from": "SIN",
+  "to": "ADL",
+  "depLocal": "08:20",
+  "durationMin": 421,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ279": {
+  "from": "SIN",
+  "to": "ADL",
+  "depLocal": "23:45",
+  "durationMin": 421,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ28": {
+  "from": "SIN",
+  "to": "SEA",
+  "depLocal": "09:00",
+  "durationMin": 956,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ285": {
+  "from": "SIN",
+  "to": "AKL",
+  "depLocal": "22:50",
+  "durationMin": 634,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ297": {
+  "from": "SIN",
+  "to": "CHC",
+  "depLocal": "19:50",
+  "durationMin": 633,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ302": {
+  "from": "SIN",
+  "to": "MAN",
+  "depLocal": "02:10",
+  "durationMin": 813,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ304": {
+  "from": "SIN",
+  "to": "BRU",
+  "depLocal": "00:20",
+  "durationMin": 785,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ306": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "01:05",
+  "durationMin": 808,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ308": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "09:00",
+  "durationMin": 808,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ309": {
+  "from": "LGW",
+  "to": "SIN",
+  "depLocal": "12:40",
+  "durationMin": 807,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ312": {
+  "from": "SIN",
+  "to": "LGW",
+  "depLocal": "23:55",
+  "durationMin": 807,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ314": {
+  "from": "SIN",
+  "to": "LGW",
+  "depLocal": "02:50",
+  "durationMin": 807,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ318": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "12:35",
+  "durationMin": 808,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ32": {
+  "from": "SIN",
+  "to": "SFO",
+  "depLocal": "09:05",
+  "durationMin": 999,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ322": {
+  "from": "SIN",
+  "to": "LHR",
+  "depLocal": "23:00",
+  "durationMin": 808,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ324": {
+  "from": "SIN",
+  "to": "AMS",
+  "depLocal": "23:55",
+  "durationMin": 782,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ326": {
+  "from": "SIN",
+  "to": "FRA",
+  "depLocal": "12:35",
+  "durationMin": 766,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ328": {
+  "from": "SIN",
+  "to": "MUC",
+  "depLocal": "00:05",
+  "durationMin": 750,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ336": {
+  "from": "SIN",
+  "to": "CDG",
+  "depLocal": "00:15",
+  "durationMin": 797,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ338": {
+  "from": "SIN",
+  "to": "CDG",
+  "depLocal": "13:35",
+  "durationMin": 797,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ34": {
+  "from": "SIN",
+  "to": "SFO",
+  "depLocal": "19:55",
+  "durationMin": 999,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ352": {
+  "from": "SIN",
+  "to": "CPH",
+  "depLocal": "00:05",
+  "durationMin": 744,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ356": {
+  "from": "SIN",
+  "to": "MXP",
+  "depLocal": "23:30",
+  "durationMin": 768,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ36": {
+  "from": "SIN",
+  "to": "LAX",
+  "depLocal": "18:40",
+  "durationMin": 1035,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ366": {
+  "from": "SIN",
+  "to": "FCO",
+  "depLocal": "01:30",
+  "durationMin": 749,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ378": {
+  "from": "SIN",
+  "to": "MXP",
+  "depLocal": "23:55",
+  "durationMin": 768,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ38": {
+  "from": "SIN",
+  "to": "LAX",
+  "depLocal": "20:45",
+  "durationMin": 1035,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ388": {
+  "from": "SIN",
+  "to": "BCN",
+  "depLocal": "23:35",
+  "durationMin": 809,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ392": {
+  "from": "SIN",
+  "to": "IST",
+  "depLocal": "02:15",
+  "durationMin": 653,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ401": {
+  "from": "DEL",
+  "to": "SIN",
+  "depLocal": "09:10",
+  "durationMin": 334,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ402": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "02:35",
+  "durationMin": 334,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ406": {
+  "from": "SIN",
+  "to": "DEL",
+  "depLocal": "16:45",
+  "durationMin": 334,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ422": {
+  "from": "SIN",
+  "to": "BOM",
+  "depLocal": "07:50",
+  "durationMin": 317,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ424": {
+  "from": "SIN",
+  "to": "BOM",
+  "depLocal": "18:50",
+  "durationMin": 317,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ432": {
+  "from": "SIN",
+  "to": "MLE",
+  "depLocal": "10:20",
+  "durationMin": 280,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ438": {
+  "from": "SIN",
+  "to": "MLE",
+  "depLocal": "20:25",
+  "durationMin": 280,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ442": {
+  "from": "SIN",
+  "to": "KTM",
+  "depLocal": "18:50",
+  "durationMin": 290,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ446": {
+  "from": "SIN",
+  "to": "DAC",
+  "depLocal": "20:40",
+  "durationMin": 245,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ462": {
+  "from": "SIN",
+  "to": "CMB",
+  "depLocal": "09:30",
+  "durationMin": 234,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ468": {
+  "from": "SIN",
+  "to": "CMB",
+  "depLocal": "22:20",
+  "durationMin": 234,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ478": {
+  "from": "SIN",
+  "to": "JNB",
+  "depLocal": "01:15",
+  "durationMin": 651,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ482": {
+  "from": "SIN",
+  "to": "JNB",
+  "depLocal": "14:15",
+  "durationMin": 651,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ504": {
+  "from": "SIN",
+  "to": "AMD",
+  "depLocal": "18:35",
+  "durationMin": 333,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ508": {
+  "from": "SIN",
+  "to": "BLR",
+  "depLocal": "08:40",
+  "durationMin": 264,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ510": {
+  "from": "SIN",
+  "to": "BLR",
+  "depLocal": "20:05",
+  "durationMin": 264,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ516": {
+  "from": "SIN",
+  "to": "CCU",
+  "depLocal": "20:40",
+  "durationMin": 245,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ518": {
+  "from": "SIN",
+  "to": "HYD",
+  "depLocal": "08:30",
+  "durationMin": 273,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ522": {
+  "from": "SIN",
+  "to": "HYD",
+  "depLocal": "20:00",
+  "durationMin": 273,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ524": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "07:40",
+  "durationMin": 246,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ528": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "20:25",
+  "durationMin": 246,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ534": {
+  "from": "SIN",
+  "to": "COK",
+  "depLocal": "20:00",
+  "durationMin": 266,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ536": {
+  "from": "SIN",
+  "to": "COK",
+  "depLocal": "22:05",
+  "durationMin": 266,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ5804": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "15:20",
+  "durationMin": 267,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ5806": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "13:10",
+  "durationMin": 267,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ600": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "08:10",
+  "durationMin": 367,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ606": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "14:55",
+  "durationMin": 367,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ608": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "00:20",
+  "durationMin": 367,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ612": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "02:25",
+  "durationMin": 367,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ616": {
+  "from": "SIN",
+  "to": "PUS",
+  "depLocal": "23:15",
+  "durationMin": 362,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ618": {
+  "from": "SIN",
+  "to": "KIX",
+  "depLocal": "01:25",
+  "durationMin": 386,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ620": {
+  "from": "SIN",
+  "to": "KIX",
+  "depLocal": "08:40",
+  "durationMin": 386,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ622": {
+  "from": "SIN",
+  "to": "KIX",
+  "depLocal": "14:10",
+  "durationMin": 386,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ632": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "07:40",
+  "durationMin": 414,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ634": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "13:55",
+  "durationMin": 414,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ636": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "22:50",
+  "durationMin": 414,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ638": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "23:55",
+  "durationMin": 418,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ656": {
+  "from": "SIN",
+  "to": "FUK",
+  "depLocal": "01:20",
+  "durationMin": 359,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ672": {
+  "from": "SIN",
+  "to": "NGO",
+  "depLocal": "01:20",
+  "durationMin": 396,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ706": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "06:40",
+  "durationMin": 140,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ708": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "09:30",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ709": {
+  "from": "BKK",
+  "to": "SIN",
+  "depLocal": "15:50",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ710": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "12:45",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ712": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "15:45",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ714": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "17:30",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ720": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "18:30",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ722": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "10:50",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ726": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "07:50",
+  "durationMin": 109,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ728": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "09:45",
+  "durationMin": 109,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7294": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "13:25",
+  "durationMin": 466,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ732": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "13:15",
+  "durationMin": 109,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7344": {
+  "from": "SIN",
+  "to": "JNB",
+  "depLocal": "21:50",
+  "durationMin": 651,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ736": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "16:15",
+  "durationMin": 109,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ740": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "18:30",
+  "durationMin": 109,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7430": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "13:15",
+  "durationMin": 367,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ7446": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "09:40",
+  "durationMin": 140,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ762": {
+  "from": "SIN",
+  "to": "RGN",
+  "depLocal": "07:55",
+  "durationMin": 176,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7820": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "00:05",
+  "durationMin": 227,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7822": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "22:05",
+  "durationMin": 227,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7860": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "12:10",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7868": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "16:10",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7874": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "12:10",
+  "durationMin": 221,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ7896": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "05:15",
+  "durationMin": 309,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ800": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "01:10",
+  "durationMin": 357,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ802": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "08:30",
+  "durationMin": 357,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ806": {
+  "from": "SIN",
+  "to": "PEK",
+  "depLocal": "16:40",
+  "durationMin": 357,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ810": {
+  "from": "SIN",
+  "to": "PKX",
+  "depLocal": "00:30",
+  "durationMin": 352,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ818": {
+  "from": "SIN",
+  "to": "CKG",
+  "depLocal": "20:05",
+  "durationMin": 263,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ826": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "01:15",
+  "durationMin": 309,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ828": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "07:45",
+  "durationMin": 309,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ830": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "09:30",
+  "durationMin": 309,
+  "aircraft": "Airbus A380-800",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ832": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "12:35",
+  "durationMin": 309,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ836": {
+  "from": "SIN",
+  "to": "PVG",
+  "depLocal": "17:10",
+  "durationMin": 309,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ838": {
+  "from": "SIN",
+  "to": "HGH",
+  "depLocal": "17:40",
+  "durationMin": 298,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ842": {
+  "from": "SIN",
+  "to": "TFU",
+  "depLocal": "12:25",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ850": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "08:00",
+  "durationMin": 227,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ852": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "19:50",
+  "durationMin": 227,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ8528": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "12:25",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ856": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "20:45",
+  "durationMin": 223,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ868": {
+  "from": "SIN",
+  "to": "XMN",
+  "depLocal": "07:50",
+  "durationMin": 251,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ874": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "07:25",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ876": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "08:40",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ878": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "11:45",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ882": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "08:40",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ892": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "09:50",
+  "durationMin": 221,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ894": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "13:05",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ898": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "19:00",
+  "durationMin": 221,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ900": {
+  "from": "SIN",
+  "to": "CEB",
+  "depLocal": "11:00",
+  "durationMin": 211,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ910": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "08:50",
+  "durationMin": 208,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ912": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "11:55",
+  "durationMin": 208,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ914": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "07:50",
+  "durationMin": 208,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ916": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "13:30",
+  "durationMin": 208,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ918": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "19:35",
+  "durationMin": 208,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ922": {
+  "from": "SIN",
+  "to": "SUB",
+  "depLocal": "07:50",
+  "durationMin": 137,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ926": {
+  "from": "SIN",
+  "to": "SUB",
+  "depLocal": "14:20",
+  "durationMin": 137,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ928": {
+  "from": "SIN",
+  "to": "SUB",
+  "depLocal": "16:55",
+  "durationMin": 137,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ934": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "06:20",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ936": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "08:20",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ938": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "09:15",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ944": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "16:10",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ946": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "17:45",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ948": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "21:35",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ950": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "06:20",
+  "durationMin": 102,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ952": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "07:40",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ956": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "09:05",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ958": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "12:35",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ960": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "15:10",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ962": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "16:15",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ964": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "17:20",
+  "durationMin": 102,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ966": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "18:30",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ968": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "21:55",
+  "durationMin": 102,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "SQ990": {
+  "from": "SIN",
+  "to": "KNO",
+  "depLocal": "07:30",
+  "durationMin": 84,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SQ994": {
+  "from": "SIN",
+  "to": "KNO",
+  "depLocal": "19:00",
+  "durationMin": 84,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "SV856": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "17:10",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-10",
+  "widebody": true,
+  "verified": false
+ },
+ "TG402": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "08:00",
+  "durationMin": 140,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TG404": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "12:25",
+  "durationMin": 140,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "TG408": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "18:15",
+  "durationMin": 140,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "TG410": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "20:50",
+  "durationMin": 140,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "TG414": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "15:55",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TH383": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "06:40",
+  "durationMin": 61,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TK168": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "10:50",
+  "durationMin": 466,
+  "aircraft": "",
+  "widebody": true,
+  "verified": false
+ },
+ "TK209": {
+  "from": "SIN",
+  "to": "IST",
+  "depLocal": "10:25",
+  "durationMin": 653,
+  "aircraft": "Airbus A350-900",
+  "widebody": true,
+  "verified": false
+ },
+ "TK55": {
+  "from": "SIN",
+  "to": "IST",
+  "depLocal": "23:05",
+  "durationMin": 653,
+  "aircraft": "Boeing 777-300ER",
+  "widebody": true,
+  "verified": false
+ },
+ "TR10": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "02:10",
+  "durationMin": 484,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR100": {
+  "from": "SIN",
+  "to": "CAN",
+  "depLocal": "05:15",
+  "durationMin": 227,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR114": {
+  "from": "SIN",
+  "to": "NNG",
+  "depLocal": "21:30",
+  "durationMin": 210,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR116": {
+  "from": "SIN",
+  "to": "CGO",
+  "depLocal": "01:30",
+  "durationMin": 310,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR118": {
+  "from": "SIN",
+  "to": "HAK",
+  "depLocal": "19:25",
+  "durationMin": 194,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR120": {
+  "from": "SIN",
+  "to": "WUH",
+  "depLocal": "18:40",
+  "durationMin": 283,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR124": {
+  "from": "SIN",
+  "to": "CSX",
+  "depLocal": "18:10",
+  "durationMin": 262,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR128": {
+  "from": "SIN",
+  "to": "SWA",
+  "depLocal": "02:55",
+  "durationMin": 239,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR134": {
+  "from": "SIN",
+  "to": "XIY",
+  "depLocal": "19:05",
+  "durationMin": 302,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR138": {
+  "from": "SIN",
+  "to": "TSN",
+  "depLocal": "01:30",
+  "durationMin": 352,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR14": {
+  "from": "SIN",
+  "to": "SYD",
+  "depLocal": "09:45",
+  "durationMin": 484,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR156": {
+  "from": "SIN",
+  "to": "SHE",
+  "depLocal": "02:45",
+  "durationMin": 385,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR16": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "03:10",
+  "durationMin": 316,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR160": {
+  "from": "SIN",
+  "to": "KMG",
+  "depLocal": "22:00",
+  "durationMin": 226,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR174": {
+  "from": "SIN",
+  "to": "FOC",
+  "depLocal": "07:00",
+  "durationMin": 266,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR180": {
+  "from": "SIN",
+  "to": "NKG",
+  "depLocal": "10:30",
+  "durationMin": 303,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR186": {
+  "from": "SIN",
+  "to": "TAO",
+  "depLocal": "01:30",
+  "durationMin": 339,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR188": {
+  "from": "SIN",
+  "to": "HGH",
+  "depLocal": "16:30",
+  "durationMin": 298,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR200": {
+  "from": "SIN",
+  "to": "SRG",
+  "depLocal": "06:15",
+  "durationMin": 122,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR206": {
+  "from": "SIN",
+  "to": "YIA",
+  "depLocal": "20:35",
+  "durationMin": 127,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR216": {
+  "from": "SIN",
+  "to": "MDC",
+  "depLocal": "09:20",
+  "durationMin": 204,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR222": {
+  "from": "SIN",
+  "to": "BPN",
+  "depLocal": "14:50",
+  "durationMin": 143,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR226": {
+  "from": "SIN",
+  "to": "PDG",
+  "depLocal": "12:10",
+  "durationMin": 74,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR240": {
+  "from": "SIN",
+  "to": "SRG",
+  "depLocal": "16:40",
+  "durationMin": 122,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR242": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "14:00",
+  "durationMin": 158,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR244": {
+  "from": "SIN",
+  "to": "KNO",
+  "depLocal": "14:45",
+  "durationMin": 84,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TR248": {
+  "from": "SIN",
+  "to": "YIA",
+  "depLocal": "08:05",
+  "durationMin": 127,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR254": {
+  "from": "SIN",
+  "to": "PLM",
+  "depLocal": "18:05",
+  "durationMin": 74,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR256": {
+  "from": "SIN",
+  "to": "PKU",
+  "depLocal": "10:30",
+  "durationMin": 61,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR258": {
+  "from": "SIN",
+  "to": "LOP",
+  "depLocal": "15:30",
+  "durationMin": 165,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR260": {
+  "from": "SIN",
+  "to": "LOP",
+  "depLocal": "06:10",
+  "durationMin": 165,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR266": {
+  "from": "SIN",
+  "to": "SUB",
+  "depLocal": "17:30",
+  "durationMin": 137,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR272": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "20:25",
+  "durationMin": 102,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR274": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "07:50",
+  "durationMin": 102,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR276": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "10:00",
+  "durationMin": 102,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR278": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "18:15",
+  "durationMin": 102,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR28": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "23:10",
+  "durationMin": 316,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR280": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "07:30",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR282": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "16:00",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR284": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "06:05",
+  "durationMin": 158,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR288": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "10:15",
+  "durationMin": 158,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR296": {
+  "from": "SIN",
+  "to": "SUB",
+  "depLocal": "08:20",
+  "durationMin": 137,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR298": {
+  "from": "SIN",
+  "to": "KJT",
+  "depLocal": "18:25",
+  "durationMin": 111,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR306": {
+  "from": "SIN",
+  "to": "PKU",
+  "depLocal": "16:05",
+  "durationMin": 61,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR308": {
+  "from": "SIN",
+  "to": "CGK",
+  "depLocal": "12:35",
+  "durationMin": 102,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR346": {
+  "from": "SIN",
+  "to": "DPS",
+  "depLocal": "21:15",
+  "durationMin": 158,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR38": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "11:05",
+  "durationMin": 466,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR416": {
+  "from": "SIN",
+  "to": "BKI",
+  "depLocal": "17:15",
+  "durationMin": 141,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR420": {
+  "from": "SIN",
+  "to": "MKZ",
+  "depLocal": "13:15",
+  "durationMin": 55,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR424": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "14:55",
+  "durationMin": 82,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR426": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "08:40",
+  "durationMin": 82,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR430": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "07:00",
+  "durationMin": 82,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR434": {
+  "from": "SIN",
+  "to": "KCH",
+  "depLocal": "19:55",
+  "durationMin": 90,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR436": {
+  "from": "SIN",
+  "to": "SBW",
+  "depLocal": "11:20",
+  "durationMin": 103,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR450": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "09:20",
+  "durationMin": 61,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR456": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "05:05",
+  "durationMin": 61,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR466": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "20:30",
+  "durationMin": 61,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR468": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "17:00",
+  "durationMin": 61,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR470": {
+  "from": "SIN",
+  "to": "KUA",
+  "depLocal": "10:00",
+  "durationMin": 60,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR472": {
+  "from": "SIN",
+  "to": "KUL",
+  "depLocal": "16:00",
+  "durationMin": 61,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR474": {
+  "from": "SIN",
+  "to": "SZB",
+  "depLocal": "12:05",
+  "durationMin": 64,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TR476": {
+  "from": "SIN",
+  "to": "LGK",
+  "depLocal": "13:40",
+  "durationMin": 91,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR480": {
+  "from": "SIN",
+  "to": "IPH",
+  "depLocal": "06:35",
+  "durationMin": 74,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TR482": {
+  "from": "SIN",
+  "to": "LGK",
+  "depLocal": "06:00",
+  "durationMin": 91,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TR484": {
+  "from": "SIN",
+  "to": "IPH",
+  "depLocal": "12:35",
+  "durationMin": 74,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR486": {
+  "from": "SIN",
+  "to": "IPH",
+  "depLocal": "15:25",
+  "durationMin": 74,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR490": {
+  "from": "SIN",
+  "to": "BKI",
+  "depLocal": "21:05",
+  "durationMin": 141,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR492": {
+  "from": "SIN",
+  "to": "BKI",
+  "depLocal": "14:45",
+  "durationMin": 141,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR496": {
+  "from": "SIN",
+  "to": "BKI",
+  "depLocal": "10:25",
+  "durationMin": 141,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR498": {
+  "from": "SIN",
+  "to": "PEN",
+  "depLocal": "19:55",
+  "durationMin": 82,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR50": {
+  "from": "SIN",
+  "to": "ATH",
+  "depLocal": "01:15",
+  "durationMin": 678,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR502": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "07:00",
+  "durationMin": 117,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR510": {
+  "from": "SIN",
+  "to": "DAD",
+  "depLocal": "08:10",
+  "durationMin": 160,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR514": {
+  "from": "SIN",
+  "to": "DAC",
+  "depLocal": "12:05",
+  "durationMin": 245,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR516": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "16:00",
+  "durationMin": 117,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR524": {
+  "from": "SIN",
+  "to": "PQC",
+  "depLocal": "16:40",
+  "durationMin": 109,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR528": {
+  "from": "SIN",
+  "to": "PQC",
+  "depLocal": "10:45",
+  "durationMin": 109,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR532": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "16:50",
+  "durationMin": 197,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR534": {
+  "from": "SIN",
+  "to": "DVO",
+  "depLocal": "15:05",
+  "durationMin": 215,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR548": {
+  "from": "SIN",
+  "to": "CXR",
+  "depLocal": "10:00",
+  "durationMin": 133,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR552": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "13:25",
+  "durationMin": 117,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR560": {
+  "from": "SIN",
+  "to": "DVO",
+  "depLocal": "02:00",
+  "durationMin": 215,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR564": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "21:20",
+  "durationMin": 250,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR568": {
+  "from": "SIN",
+  "to": "CRK",
+  "depLocal": "01:55",
+  "durationMin": 208,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR570": {
+  "from": "SIN",
+  "to": "CEB",
+  "depLocal": "08:25",
+  "durationMin": 211,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR572": {
+  "from": "SIN",
+  "to": "ILO",
+  "depLocal": "02:00",
+  "durationMin": 202,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR58": {
+  "from": "SIN",
+  "to": "MEL",
+  "depLocal": "02:30",
+  "durationMin": 466,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR580": {
+  "from": "SIN",
+  "to": "CEB",
+  "depLocal": "21:25",
+  "durationMin": 211,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR588": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "01:50",
+  "durationMin": 208,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR590": {
+  "from": "SIN",
+  "to": "MNL",
+  "depLocal": "14:40",
+  "durationMin": 208,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR608": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "06:30",
+  "durationMin": 140,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR610": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "16:15",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR624": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "08:20",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR626": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "18:00",
+  "durationMin": 140,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR632": {
+  "from": "SIN",
+  "to": "HDY",
+  "depLocal": "17:10",
+  "durationMin": 92,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR638": {
+  "from": "SIN",
+  "to": "BKK",
+  "depLocal": "12:50",
+  "durationMin": 140,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR640": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "07:00",
+  "durationMin": 111,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR644": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "12:20",
+  "durationMin": 109,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR646": {
+  "from": "SIN",
+  "to": "HDY",
+  "depLocal": "12:45",
+  "durationMin": 92,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR648": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "17:55",
+  "durationMin": 111,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR652": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "18:50",
+  "durationMin": 109,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR656": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "12:00",
+  "durationMin": 109,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR658": {
+  "from": "SIN",
+  "to": "HKT",
+  "depLocal": "07:30",
+  "durationMin": 109,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR660": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "09:20",
+  "durationMin": 111,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR662": {
+  "from": "SIN",
+  "to": "CNX",
+  "depLocal": "14:15",
+  "durationMin": 182,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR670": {
+  "from": "SIN",
+  "to": "CEI",
+  "depLocal": "16:25",
+  "durationMin": 189,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR672": {
+  "from": "SIN",
+  "to": "CNX",
+  "depLocal": "08:20",
+  "durationMin": 182,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR674": {
+  "from": "SIN",
+  "to": "CNX",
+  "depLocal": "02:50",
+  "durationMin": 182,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR680": {
+  "from": "SIN",
+  "to": "CNX",
+  "depLocal": "09:15",
+  "durationMin": 182,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR682": {
+  "from": "SIN",
+  "to": "KBV",
+  "depLocal": "11:15",
+  "durationMin": 106,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR684": {
+  "from": "SIN",
+  "to": "KBV",
+  "depLocal": "15:40",
+  "durationMin": 106,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR692": {
+  "from": "SIN",
+  "to": "HDY",
+  "depLocal": "17:55",
+  "durationMin": 92,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR694": {
+  "from": "SIN",
+  "to": "USM",
+  "depLocal": "16:25",
+  "durationMin": 111,
+  "aircraft": "E290",
+  "widebody": false,
+  "verified": false
+ },
+ "TR730": {
+  "from": "SIN",
+  "to": "TRV",
+  "depLocal": "20:30",
+  "durationMin": 259,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "TR740": {
+  "from": "SIN",
+  "to": "CJB",
+  "depLocal": "20:30",
+  "durationMin": 263,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR750": {
+  "from": "SIN",
+  "to": "ATQ",
+  "depLocal": "05:35",
+  "durationMin": 362,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR758": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "21:40",
+  "durationMin": 250,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR766": {
+  "from": "SIN",
+  "to": "TRZ",
+  "depLocal": "22:55",
+  "durationMin": 250,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR778": {
+  "from": "SIN",
+  "to": "MAA",
+  "depLocal": "22:05",
+  "durationMin": 246,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR8": {
+  "from": "SIN",
+  "to": "PER",
+  "depLocal": "12:00",
+  "durationMin": 316,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR820": {
+  "from": "SIN",
+  "to": "KIX",
+  "depLocal": "06:55",
+  "durationMin": 386,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR828": {
+  "from": "SIN",
+  "to": "CJU",
+  "depLocal": "00:35",
+  "durationMin": 342,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "TR834": {
+  "from": "SIN",
+  "to": "OKA",
+  "depLocal": "02:30",
+  "durationMin": 304,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR866": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "01:00",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR872": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "12:50",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR874": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "09:30",
+  "durationMin": 267,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR882": {
+  "from": "SIN",
+  "to": "HND",
+  "depLocal": "17:15",
+  "durationMin": 414,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR884": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "23:05",
+  "durationMin": 418,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "TR892": {
+  "from": "SIN",
+  "to": "TPE",
+  "depLocal": "07:25",
+  "durationMin": 267,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "TR904": {
+  "from": "SIN",
+  "to": "MFM",
+  "depLocal": "13:50",
+  "durationMin": 219,
+  "aircraft": "Airbus A320 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TR982": {
+  "from": "SIN",
+  "to": "HKG",
+  "depLocal": "15:25",
+  "durationMin": 221,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "TW162": {
+  "from": "SIN",
+  "to": "ICN",
+  "depLocal": "23:00",
+  "durationMin": 367,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "TW166": {
+  "from": "SIN",
+  "to": "CJU",
+  "depLocal": "02:15",
+  "durationMin": 342,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ },
+ "UA2": {
+  "from": "SIN",
+  "to": "SFO",
+  "depLocal": "08:45",
+  "durationMin": 999,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "UA28": {
+  "from": "SIN",
+  "to": "SFO",
+  "depLocal": "20:35",
+  "durationMin": 999,
+  "aircraft": "Boeing 787-9",
+  "widebody": true,
+  "verified": false
+ },
+ "UB2": {
+  "from": "SIN",
+  "to": "RGN",
+  "depLocal": "15:25",
+  "durationMin": 176,
+  "aircraft": "Boeing 737-800",
+  "widebody": false,
+  "verified": false
+ },
+ "UL307": {
+  "from": "SIN",
+  "to": "CMB",
+  "depLocal": "10:00",
+  "durationMin": 234,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "UL309": {
+  "from": "SIN",
+  "to": "CMB",
+  "depLocal": "20:10",
+  "durationMin": 234,
+  "aircraft": "Airbus A330-300",
+  "widebody": true,
+  "verified": false
+ },
+ "VJ812": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "19:30",
+  "durationMin": 117,
+  "aircraft": "Airbus A321 NEO",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ813": {
+  "from": "SGN",
+  "to": "SIN",
+  "depLocal": "08:50",
+  "durationMin": 117,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ814": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "17:55",
+  "durationMin": 117,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ890": {
+  "from": "SIN",
+  "to": "DAD",
+  "depLocal": "19:15",
+  "durationMin": 160,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ916": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "14:55",
+  "durationMin": 197,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ970": {
+  "from": "SIN",
+  "to": "DAD",
+  "depLocal": "11:15",
+  "durationMin": 160,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ983": {
+  "from": "PQC",
+  "to": "SIN",
+  "depLocal": "16:45",
+  "durationMin": 109,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "VJ984": {
+  "from": "SIN",
+  "to": "PQC",
+  "depLocal": "13:05",
+  "durationMin": 109,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "VN650": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "13:10",
+  "durationMin": 117,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VN654": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "18:25",
+  "durationMin": 117,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VN656": {
+  "from": "SIN",
+  "to": "SGN",
+  "depLocal": "21:00",
+  "durationMin": 117,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VN660": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "13:05",
+  "durationMin": 197,
+  "aircraft": "Airbus A321",
+  "widebody": false,
+  "verified": false
+ },
+ "VN662": {
+  "from": "SIN",
+  "to": "HAN",
+  "depLocal": "17:30",
+  "durationMin": 197,
+  "aircraft": "",
+  "widebody": false,
+  "verified": false
+ },
+ "ZG54": {
+  "from": "SIN",
+  "to": "NRT",
+  "depLocal": "00:30",
+  "durationMin": 418,
+  "aircraft": "Boeing 787-8",
+  "widebody": true,
+  "verified": false
+ },
+ "ZH228": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "03:00",
+  "durationMin": 223,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "ZH230": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "18:10",
+  "durationMin": 223,
+  "aircraft": "Airbus A320",
+  "widebody": false,
+  "verified": false
+ },
+ "ZH240": {
+  "from": "SIN",
+  "to": "SZX",
+  "depLocal": "13:30",
+  "durationMin": 223,
+  "aircraft": "Boeing 737 MAX 8",
+  "widebody": false,
+  "verified": false
+ }
+}

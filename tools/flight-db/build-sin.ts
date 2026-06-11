@@ -21,6 +21,8 @@ import { config } from "../../src/lib/data/config";
 import curatedFlights from "../../src/lib/data/flights.json";
 import { gcKm } from "../../src/lib/pipeline/geo";
 import type { Airport, FlightEntry } from "../../src/lib/types";
+import "../env";
+import { openskyAuthenticated, openskyHeaders } from "../opensky";
 
 const HOME = "SIN";
 const HOME_ICAO = "WSSS";
@@ -61,6 +63,7 @@ async function fetchOpenSkyDay(kind: "departure" | "arrival", dayOffset: number)
   if (existsSync(join(cacheDir, name))) return;
   const r = await fetch(
     `https://opensky-network.org/api/flights/${kind}?airport=${HOME_ICAO}&begin=${begin}&end=${end}`,
+    { headers: await openskyHeaders() },
   );
   if (!r.ok) {
     console.log(`  OpenSky ${kind} ${date}: HTTP ${r.status} — skipped`);
@@ -68,6 +71,71 @@ async function fetchOpenSkyDay(kind: "departure" | "arrival", dayOffset: number)
   }
   writeFileSync(join(cacheDir, name), await r.text());
   console.log(`  cached ${name}`);
+}
+
+/* ---- 1b. AeroDataBox: the PUBLISHED departure board (preferred source) -- */
+interface AdbFlight {
+  number?: string;
+  codeshareStatus?: string;
+  movement?: {
+    airport?: { iata?: string };
+    scheduledTime?: { local?: string };
+  };
+  aircraft?: { model?: string };
+}
+
+const WIDEBODY_MODEL = /A3[345]0|A380|7[456-8]7|777/i;
+
+/** Next 24h of scheduled SIN departures, in two 12h windows (cached per window). */
+async function fetchAdbDepartures(): Promise<AdbFlight[]> {
+  const key = process.env.RAPIDAPI_KEY;
+  if (!key) {
+    console.log("  no RAPIDAPI_KEY — skipping AeroDataBox schedule board");
+    return [];
+  }
+  const out: AdbFlight[] = [];
+  for (const offsetH of [0, 12]) {
+    const from = new Date(Date.now() + offsetH * 3600e3);
+    const to = new Date(Date.now() + (offsetH + 12) * 3600e3);
+    const fmt = (d: Date) =>
+      new Intl.DateTimeFormat("sv-SE", {
+        timeZone: "Asia/Singapore",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit",
+      })
+        .format(d)
+        .replace(" ", "T");
+    const name = `adb-dep-${fmt(from).slice(0, 13)}.json`;
+    const body = await cached(name, async () => {
+      // Basic plan enforces a per-second rate limit — space calls out and
+      // retry once on 429
+      for (let attempt = 0; ; attempt++) {
+        await sleep(1500);
+        const r = await fetch(
+          `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${HOME}/${fmt(from)}/${fmt(to)}?direction=Departure&withCancelled=false&withCodeshared=false&withCargo=false&withPrivate=false`,
+          {
+            headers: {
+              "X-RapidAPI-Key": key,
+              "X-RapidAPI-Host": "aerodatabox.p.rapidapi.com",
+            },
+          },
+        );
+        if (r.status === 429 && attempt < 2) {
+          console.log("  ADB 429 — backing off 5s");
+          await sleep(5000);
+          continue;
+        }
+        if (!r.ok) throw new Error(`AeroDataBox HTTP ${r.status}: ${(await r.text()).slice(0, 120)}`);
+        return r.text();
+      }
+    });
+    try {
+      out.push(...(JSON.parse(body).departures ?? []));
+    } catch {
+      console.log(`  unparseable ADB window ${name}`);
+    }
+  }
+  return out;
 }
 
 function loadObservations(): { dep: OsFlight[]; arr: OsFlight[] } {
@@ -165,9 +233,12 @@ function splitCallsign(cs: string): [string, string] | null {
 
 /* ---- main ---------------------------------------------------------------- */
 async function main() {
-  console.log("Fetching OpenSky WSSS observations (anonymous, ≤1-day windows)…");
+  const days = openskyAuthenticated() ? 7 : 2;
+  console.log(
+    `Fetching OpenSky WSSS observations (${openskyAuthenticated() ? "authenticated" : "anonymous"}, ${days} daily windows)…`,
+  );
   for (const kind of ["departure", "arrival"] as const)
-    for (const off of [0, 1]) {
+    for (let off = 0; off < days; off++) {
       try {
         await fetchOpenSkyDay(kind, off);
       } catch (e) {
@@ -239,6 +310,37 @@ async function main() {
       verified: false,
     };
   }
+
+  // overlay the published departure board — scheduled times beat observed
+  console.log("Fetching AeroDataBox scheduled departures (next 24h)…");
+  let adbCount = 0;
+  try {
+    for (const f of await fetchAdbDepartures()) {
+      const flightNo = (f.number || "").replace(/\s+/g, "").toUpperCase();
+      const dest = f.movement?.airport?.iata?.toUpperCase();
+      const local = f.movement?.scheduledTime?.local; // "2026-06-12 08:15+08:00"
+      if (!/^[A-Z0-9]{2}\d{1,4}$/.test(flightNo) || !dest || !local) continue;
+      if (curatedFl[flightNo] || dest === HOME) { skipped.curated++; continue; }
+      const ap = curatedAp[dest] ?? airports.get(dest);
+      if (!ap) { skipped.noAirport++; continue; }
+      if (!curatedAp[dest]) neededAirports.add(dest);
+      const dist = gcKm(curatedAp[HOME], { lat: ap.lat, lon: ap.lon });
+      const model = f.aircraft?.model || "";
+      flights[flightNo] = {
+        from: HOME,
+        to: dest,
+        depLocal: local.slice(11, 16),
+        durationMin: Math.round((dist / config.cruiseKmh) * 60) + 40,
+        aircraft: model,
+        widebody: model ? WIDEBODY_MODEL.test(model) : dist > WIDEBODY_KM,
+        verified: false,
+      };
+      adbCount++;
+    }
+  } catch (e) {
+    console.log(`  AeroDataBox failed: ${e} — keeping observed data only`);
+  }
+  console.log(`  ${adbCount} scheduled departures applied`);
 
   const genAirports: Record<string, Airport> = {};
   for (const code of [...neededAirports].sort()) {

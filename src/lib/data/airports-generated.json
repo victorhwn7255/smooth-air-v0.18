@@ -1,1 +1,786 @@
-{}
+{
+ "ADD": {
+  "code": "ADD",
+  "lat": 8.978,
+  "lon": 38.799,
+  "city": "Addis Ababa",
+  "tz": "Africa/Addis_Ababa"
+ },
+ "ADL": {
+  "code": "ADL",
+  "lat": -34.945,
+  "lon": 138.531,
+  "city": "Adelaide",
+  "tz": "Australia/Adelaide"
+ },
+ "AMD": {
+  "code": "AMD",
+  "lat": 23.077,
+  "lon": 72.635,
+  "city": "Ahmedabad",
+  "tz": "Asia/Kolkata"
+ },
+ "ANC": {
+  "code": "ANC",
+  "lat": 61.174,
+  "lon": -149.996,
+  "city": "Anchorage",
+  "tz": "America/Anchorage"
+ },
+ "ATH": {
+  "code": "ATH",
+  "lat": 37.936,
+  "lon": 23.944,
+  "city": "Athens",
+  "tz": "Europe/Athens"
+ },
+ "ATQ": {
+  "code": "ATQ",
+  "lat": 31.71,
+  "lon": 74.797,
+  "city": "Amritsar",
+  "tz": "Asia/Kolkata"
+ },
+ "AUH": {
+  "code": "AUH",
+  "lat": 24.433,
+  "lon": 54.651,
+  "city": "Abu Dhabi",
+  "tz": "Asia/Dubai"
+ },
+ "BAH": {
+  "code": "BAH",
+  "lat": 26.271,
+  "lon": 50.634,
+  "city": "Manama",
+  "tz": "Asia/Bahrain"
+ },
+ "BCN": {
+  "code": "BCN",
+  "lat": 41.297,
+  "lon": 2.078,
+  "city": "Barcelona",
+  "tz": "Europe/Madrid"
+ },
+ "BKI": {
+  "code": "BKI",
+  "lat": 5.937,
+  "lon": 116.051,
+  "city": "Kota Kinabalu",
+  "tz": "Asia/Kuching"
+ },
+ "BLR": {
+  "code": "BLR",
+  "lat": 13.198,
+  "lon": 77.706,
+  "city": "Bangalore",
+  "tz": "Asia/Kolkata"
+ },
+ "BNE": {
+  "code": "BNE",
+  "lat": -27.384,
+  "lon": 153.117,
+  "city": "Brisbane",
+  "tz": "Australia/Brisbane"
+ },
+ "BPN": {
+  "code": "BPN",
+  "lat": -1.268,
+  "lon": 116.894,
+  "city": "Balikpapan-Borneo Island",
+  "tz": "Asia/Makassar"
+ },
+ "BRU": {
+  "code": "BRU",
+  "lat": 50.901,
+  "lon": 4.484,
+  "city": "Brussels",
+  "tz": "Europe/Brussels"
+ },
+ "BWN": {
+  "code": "BWN",
+  "lat": 4.944,
+  "lon": 114.928,
+  "city": "Bandar Seri Begawan",
+  "tz": "Asia/Brunei"
+ },
+ "CAN": {
+  "code": "CAN",
+  "lat": 23.392,
+  "lon": 113.299,
+  "city": "Guangzhou",
+  "tz": "Asia/Shanghai"
+ },
+ "CCU": {
+  "code": "CCU",
+  "lat": 22.655,
+  "lon": 88.447,
+  "city": "Kolkata",
+  "tz": "Asia/Kolkata"
+ },
+ "CEB": {
+  "code": "CEB",
+  "lat": 10.307,
+  "lon": 123.979,
+  "city": "Lapu-Lapu City",
+  "tz": "Asia/Manila"
+ },
+ "CEI": {
+  "code": "CEI",
+  "lat": 19.952,
+  "lon": 99.883,
+  "city": "Chiang Rai",
+  "tz": "Asia/Bangkok"
+ },
+ "CGO": {
+  "code": "CGO",
+  "lat": 34.52,
+  "lon": 113.841,
+  "city": "Zhengzhou",
+  "tz": "Asia/Shanghai"
+ },
+ "CHC": {
+  "code": "CHC",
+  "lat": -43.489,
+  "lon": 172.532,
+  "city": "Christchurch",
+  "tz": "Pacific/Auckland"
+ },
+ "CJB": {
+  "code": "CJB",
+  "lat": 11.03,
+  "lon": 77.043,
+  "city": "Coimbatore",
+  "tz": "Asia/Kolkata"
+ },
+ "CJU": {
+  "code": "CJU",
+  "lat": 33.511,
+  "lon": 126.493,
+  "city": "Jeju City",
+  "tz": "Asia/Seoul"
+ },
+ "CKG": {
+  "code": "CKG",
+  "lat": 29.719,
+  "lon": 106.642,
+  "city": "Chongqing",
+  "tz": "Asia/Shanghai"
+ },
+ "CMB": {
+  "code": "CMB",
+  "lat": 7.181,
+  "lon": 79.884,
+  "city": "Colombo",
+  "tz": "Asia/Colombo"
+ },
+ "CNS": {
+  "code": "CNS",
+  "lat": -16.886,
+  "lon": 145.755,
+  "city": "Cairns",
+  "tz": "Australia/Brisbane"
+ },
+ "CNX": {
+  "code": "CNX",
+  "lat": 18.767,
+  "lon": 98.963,
+  "city": "Chiang Mai",
+  "tz": "Asia/Bangkok"
+ },
+ "COK": {
+  "code": "COK",
+  "lat": 10.152,
+  "lon": 76.402,
+  "city": "Cochin",
+  "tz": "Asia/Kolkata"
+ },
+ "CPH": {
+  "code": "CPH",
+  "lat": 55.618,
+  "lon": 12.656,
+  "city": "Copenhagen",
+  "tz": "Europe/Copenhagen"
+ },
+ "CRK": {
+  "code": "CRK",
+  "lat": 15.186,
+  "lon": 120.56,
+  "city": "Angeles City",
+  "tz": "Asia/Manila"
+ },
+ "CSX": {
+  "code": "CSX",
+  "lat": 28.189,
+  "lon": 113.22,
+  "city": "Changsha",
+  "tz": "Asia/Shanghai"
+ },
+ "CXR": {
+  "code": "CXR",
+  "lat": 11.998,
+  "lon": 109.219,
+  "city": "Nha Trang",
+  "tz": "Asia/Ho_Chi_Minh"
+ },
+ "DAC": {
+  "code": "DAC",
+  "lat": 23.843,
+  "lon": 90.398,
+  "city": "Dhaka",
+  "tz": "Asia/Dhaka"
+ },
+ "DAD": {
+  "code": "DAD",
+  "lat": 16.044,
+  "lon": 108.199,
+  "city": "Da Nang",
+  "tz": "Asia/Ho_Chi_Minh"
+ },
+ "DMK": {
+  "code": "DMK",
+  "lat": 13.913,
+  "lon": 100.607,
+  "city": "Bangkok",
+  "tz": "Asia/Bangkok"
+ },
+ "DRW": {
+  "code": "DRW",
+  "lat": -12.415,
+  "lon": 130.877,
+  "city": "Darwin",
+  "tz": "Australia/Darwin"
+ },
+ "DVO": {
+  "code": "DVO",
+  "lat": 7.126,
+  "lon": 125.646,
+  "city": "Davao City",
+  "tz": "Asia/Manila"
+ },
+ "EWR": {
+  "code": "EWR",
+  "lat": 40.693,
+  "lon": -74.169,
+  "city": "Newark",
+  "tz": "America/New_York"
+ },
+ "FCO": {
+  "code": "FCO",
+  "lat": 41.805,
+  "lon": 12.251,
+  "city": "Rome",
+  "tz": "Europe/Rome"
+ },
+ "FOC": {
+  "code": "FOC",
+  "lat": 25.935,
+  "lon": 119.663,
+  "city": "Fuzhou",
+  "tz": "Asia/Shanghai"
+ },
+ "FUK": {
+  "code": "FUK",
+  "lat": 33.586,
+  "lon": 130.451,
+  "city": "Fukuoka",
+  "tz": "Asia/Tokyo"
+ },
+ "HAK": {
+  "code": "HAK",
+  "lat": 19.935,
+  "lon": 110.459,
+  "city": "Haikou",
+  "tz": "Asia/Shanghai"
+ },
+ "HAN": {
+  "code": "HAN",
+  "lat": 21.221,
+  "lon": 105.807,
+  "city": "Hanoi",
+  "tz": "Asia/Bangkok"
+ },
+ "HDY": {
+  "code": "HDY",
+  "lat": 6.933,
+  "lon": 100.393,
+  "city": "Hat Yai",
+  "tz": "Asia/Bangkok"
+ },
+ "HEL": {
+  "code": "HEL",
+  "lat": 60.317,
+  "lon": 24.963,
+  "city": "Helsinki",
+  "tz": "Europe/Helsinki"
+ },
+ "HFE": {
+  "code": "HFE",
+  "lat": 31.989,
+  "lon": 116.964,
+  "city": "Hefei",
+  "tz": "Asia/Shanghai"
+ },
+ "HGH": {
+  "code": "HGH",
+  "lat": 30.229,
+  "lon": 120.434,
+  "city": "Hangzhou",
+  "tz": "Asia/Shanghai"
+ },
+ "HKT": {
+  "code": "HKT",
+  "lat": 8.113,
+  "lon": 98.317,
+  "city": "Phuket",
+  "tz": "Asia/Bangkok"
+ },
+ "HYD": {
+  "code": "HYD",
+  "lat": 17.231,
+  "lon": 78.43,
+  "city": "Hyderabad",
+  "tz": "Asia/Kolkata"
+ },
+ "ILO": {
+  "code": "ILO",
+  "lat": 10.833,
+  "lon": 122.493,
+  "city": "Iloilo City",
+  "tz": "Asia/Manila"
+ },
+ "IPH": {
+  "code": "IPH",
+  "lat": 4.568,
+  "lon": 101.092,
+  "city": "Ipoh",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "JJN": {
+  "code": "JJN",
+  "lat": 24.796,
+  "lon": 118.59,
+  "city": "Quanzhou",
+  "tz": "Asia/Shanghai"
+ },
+ "JNB": {
+  "code": "JNB",
+  "lat": -26.133,
+  "lon": 28.25,
+  "city": "Johannesburg",
+  "tz": "Africa/Johannesburg"
+ },
+ "KBV": {
+  "code": "KBV",
+  "lat": 8.099,
+  "lon": 98.986,
+  "city": "Krabi",
+  "tz": "Asia/Bangkok"
+ },
+ "KCH": {
+  "code": "KCH",
+  "lat": 1.485,
+  "lon": 110.347,
+  "city": "Kuching",
+  "tz": "Asia/Kuching"
+ },
+ "KHH": {
+  "code": "KHH",
+  "lat": 22.577,
+  "lon": 120.35,
+  "city": "Kaohsiung City",
+  "tz": "Asia/Taipei"
+ },
+ "KHN": {
+  "code": "KHN",
+  "lat": 28.865,
+  "lon": 115.9,
+  "city": "Nanchang",
+  "tz": "Asia/Shanghai"
+ },
+ "KIX": {
+  "code": "KIX",
+  "lat": 34.427,
+  "lon": 135.244,
+  "city": "Osaka",
+  "tz": "Asia/Tokyo"
+ },
+ "KJT": {
+  "code": "KJT",
+  "lat": -6.648,
+  "lon": 108.166,
+  "city": "Kertajati",
+  "tz": "Asia/Jakarta"
+ },
+ "KMG": {
+  "code": "KMG",
+  "lat": 24.992,
+  "lon": 102.744,
+  "city": "Kunming",
+  "tz": "Asia/Shanghai"
+ },
+ "KNO": {
+  "code": "KNO",
+  "lat": 3.638,
+  "lon": 98.871,
+  "city": "Medan-Sumatra Island",
+  "tz": "Asia/Jakarta"
+ },
+ "KTI": {
+  "code": "KTI",
+  "lat": 11.363,
+  "lon": 104.917,
+  "city": "Phnom Penh",
+  "tz": "Asia/Phnom_Penh"
+ },
+ "KTM": {
+  "code": "KTM",
+  "lat": 27.697,
+  "lon": 85.359,
+  "city": "Kathmandu",
+  "tz": "Asia/Kathmandu"
+ },
+ "KUA": {
+  "code": "KUA",
+  "lat": 3.775,
+  "lon": 103.209,
+  "city": "Kuantan",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "KWE": {
+  "code": "KWE",
+  "lat": 26.538,
+  "lon": 106.801,
+  "city": "Guiyang",
+  "tz": "Asia/Shanghai"
+ },
+ "LGK": {
+  "code": "LGK",
+  "lat": 6.33,
+  "lon": 99.729,
+  "city": "Langkawi",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "LGW": {
+  "code": "LGW",
+  "lat": 51.148,
+  "lon": -0.19,
+  "city": "London",
+  "tz": "Europe/London"
+ },
+ "LOP": {
+  "code": "LOP",
+  "lat": -8.757,
+  "lon": 116.277,
+  "city": "Mataram",
+  "tz": "Asia/Makassar"
+ },
+ "MAA": {
+  "code": "MAA",
+  "lat": 12.99,
+  "lon": 80.169,
+  "city": "Chennai",
+  "tz": "Asia/Kolkata"
+ },
+ "MAN": {
+  "code": "MAN",
+  "lat": 53.354,
+  "lon": -2.275,
+  "city": "Manchester",
+  "tz": "Europe/London"
+ },
+ "MDC": {
+  "code": "MDC",
+  "lat": 1.549,
+  "lon": 124.926,
+  "city": "Manado-Celebes Island",
+  "tz": "Asia/Makassar"
+ },
+ "MFM": {
+  "code": "MFM",
+  "lat": 22.15,
+  "lon": 113.592,
+  "city": "Taipa",
+  "tz": "Asia/Macau"
+ },
+ "MKZ": {
+  "code": "MKZ",
+  "lat": 2.263,
+  "lon": 102.252,
+  "city": "Malacca",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "MLE": {
+  "code": "MLE",
+  "lat": 4.192,
+  "lon": 73.529,
+  "city": "Male",
+  "tz": "Indian/Maldives"
+ },
+ "MXP": {
+  "code": "MXP",
+  "lat": 45.631,
+  "lon": 8.728,
+  "city": "Milan",
+  "tz": "Europe/Rome"
+ },
+ "NGO": {
+  "code": "NGO",
+  "lat": 34.858,
+  "lon": 136.805,
+  "city": "Tokoname",
+  "tz": "Asia/Tokyo"
+ },
+ "NKG": {
+  "code": "NKG",
+  "lat": 31.742,
+  "lon": 118.862,
+  "city": "Nanjing",
+  "tz": "Asia/Shanghai"
+ },
+ "NNG": {
+  "code": "NNG",
+  "lat": 22.608,
+  "lon": 108.172,
+  "city": "Nanning",
+  "tz": "Asia/Shanghai"
+ },
+ "NOU": {
+  "code": "NOU",
+  "lat": -22.015,
+  "lon": 166.213,
+  "city": "Noumea",
+  "tz": "Pacific/Noumea"
+ },
+ "OKA": {
+  "code": "OKA",
+  "lat": 26.196,
+  "lon": 127.646,
+  "city": "Naha",
+  "tz": "Asia/Tokyo"
+ },
+ "PDG": {
+  "code": "PDG",
+  "lat": -0.787,
+  "lon": 100.281,
+  "city": "Ketaping/Padang-Sumatra Island",
+  "tz": "Asia/Jakarta"
+ },
+ "PEN": {
+  "code": "PEN",
+  "lat": 5.297,
+  "lon": 100.277,
+  "city": "Penang",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "PKU": {
+  "code": "PKU",
+  "lat": 0.461,
+  "lon": 101.445,
+  "city": "Pekanbaru-Sumatra Island",
+  "tz": "Asia/Jakarta"
+ },
+ "PKX": {
+  "code": "PKX",
+  "lat": 39.509,
+  "lon": 116.411,
+  "city": "Beijing",
+  "tz": "Asia/Shanghai"
+ },
+ "PLM": {
+  "code": "PLM",
+  "lat": -2.898,
+  "lon": 104.7,
+  "city": "Palembang-Sumatra Island",
+  "tz": "Asia/Jakarta"
+ },
+ "POM": {
+  "code": "POM",
+  "lat": -9.443,
+  "lon": 147.22,
+  "city": "Port Moresby",
+  "tz": "Pacific/Port_Moresby"
+ },
+ "PQC": {
+  "code": "PQC",
+  "lat": 10.168,
+  "lon": 103.995,
+  "city": "Duong Dong",
+  "tz": "Asia/Ho_Chi_Minh"
+ },
+ "PUS": {
+  "code": "PUS",
+  "lat": 35.18,
+  "lon": 128.938,
+  "city": "Busan",
+  "tz": "Asia/Seoul"
+ },
+ "RGN": {
+  "code": "RGN",
+  "lat": 16.907,
+  "lon": 96.133,
+  "city": "Yangon",
+  "tz": "Asia/Yangon"
+ },
+ "SAI": {
+  "code": "SAI",
+  "lat": 13.375,
+  "lon": 104.221,
+  "city": "Siem Reap",
+  "tz": "Asia/Phnom_Penh"
+ },
+ "SBW": {
+  "code": "SBW",
+  "lat": 2.262,
+  "lon": 111.985,
+  "city": "Sibu",
+  "tz": "Asia/Kuching"
+ },
+ "SGN": {
+  "code": "SGN",
+  "lat": 10.819,
+  "lon": 106.652,
+  "city": "Ho Chi Minh City",
+  "tz": "Asia/Ho_Chi_Minh"
+ },
+ "SHE": {
+  "code": "SHE",
+  "lat": 41.64,
+  "lon": 123.483,
+  "city": "Shenyang",
+  "tz": "Asia/Shanghai"
+ },
+ "SRG": {
+  "code": "SRG",
+  "lat": -6.973,
+  "lon": 110.375,
+  "city": "Semarang-Java Island",
+  "tz": "Asia/Jakarta"
+ },
+ "SUB": {
+  "code": "SUB",
+  "lat": -7.38,
+  "lon": 112.787,
+  "city": "Surabaya",
+  "tz": "Asia/Jakarta"
+ },
+ "SWA": {
+  "code": "SWA",
+  "lat": 23.427,
+  "lon": 116.762,
+  "city": "Shantou",
+  "tz": "Asia/Shanghai"
+ },
+ "SYX": {
+  "code": "SYX",
+  "lat": 18.303,
+  "lon": 109.412,
+  "city": "Sanya",
+  "tz": "Asia/Shanghai"
+ },
+ "SZB": {
+  "code": "SZB",
+  "lat": 3.131,
+  "lon": 101.549,
+  "city": "Subang",
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "SZX": {
+  "code": "SZX",
+  "lat": 22.639,
+  "lon": 113.811,
+  "city": "Shenzhen",
+  "tz": "Asia/Shanghai"
+ },
+ "TAO": {
+  "code": "TAO",
+  "lat": 36.362,
+  "lon": 120.088,
+  "city": "Qingdao",
+  "tz": "Asia/Shanghai"
+ },
+ "TFU": {
+  "code": "TFU",
+  "lat": 30.319,
+  "lon": 104.445,
+  "city": "Chengdu",
+  "tz": "Asia/Shanghai"
+ },
+ "TNA": {
+  "code": "TNA",
+  "lat": 36.857,
+  "lon": 117.216,
+  "city": "Jinan",
+  "tz": "Asia/Shanghai"
+ },
+ "TRV": {
+  "code": "TRV",
+  "lat": 8.482,
+  "lon": 76.92,
+  "city": "Trivandrum",
+  "tz": "Asia/Kolkata"
+ },
+ "TRZ": {
+  "code": "TRZ",
+  "lat": 10.765,
+  "lon": 78.71,
+  "city": "Tiruchirappally",
+  "tz": "Asia/Kolkata"
+ },
+ "TSN": {
+  "code": "TSN",
+  "lat": 39.124,
+  "lon": 117.346,
+  "city": "Tianjin",
+  "tz": "Asia/Shanghai"
+ },
+ "USM": {
+  "code": "USM",
+  "lat": 9.548,
+  "lon": 100.062,
+  "city": "Na Thon (Ko Samui Island)",
+  "tz": "Asia/Bangkok"
+ },
+ "VGA": {
+  "code": "VGA",
+  "lat": 16.53,
+  "lon": 80.797,
+  "city": "Vijayawada",
+  "tz": "Asia/Kolkata"
+ },
+ "WUH": {
+  "code": "WUH",
+  "lat": 30.784,
+  "lon": 114.208,
+  "city": "Wuhan",
+  "tz": "Asia/Shanghai"
+ },
+ "WUX": {
+  "code": "WUX",
+  "lat": 31.494,
+  "lon": 120.429,
+  "city": "Wuxi",
+  "tz": "Asia/Shanghai"
+ },
+ "XIY": {
+  "code": "XIY",
+  "lat": 34.447,
+  "lon": 108.752,
+  "city": "Xianyang",
+  "tz": "Asia/Shanghai"
+ },
+ "XMN": {
+  "code": "XMN",
+  "lat": 24.544,
+  "lon": 118.128,
+  "city": "Xiamen",
+  "tz": "Asia/Shanghai"
+ },
+ "YIA": {
+  "code": "YIA",
+  "lat": -7.907,
+  "lon": 110.054,
+  "city": "Yogyakarta",
+  "tz": "Asia/Jakarta"
+ }
+}

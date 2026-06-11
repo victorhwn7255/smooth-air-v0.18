@@ -19,6 +19,7 @@ import airportsJson from "../../src/lib/data/airports.json";
 import flightsJson from "../../src/lib/data/flights.json";
 import { gcKm, slerp } from "../../src/lib/pipeline/geo";
 import type { Airport, FlightEntry } from "../../src/lib/types";
+import { openskyAuthenticated, openskyHeaders } from "../opensky";
 import {
   firstLeg,
   medianTracks,
@@ -62,18 +63,22 @@ async function fetchOpenSky(flightNo: string, route: FlightEntry) {
   }
   const callsign = callsignFor(flightNo);
   const now = Math.floor(Date.now() / 1000);
-  console.log(`  OpenSky: departures ${icaoAirport} (callsign ${callsign}), last ~2 days…`);
-  // anonymous access allows ≤1-day windows and only recent history
+  const headers = await openskyHeaders();
+  // registered accounts reach ~30 days of history; anonymous only ~1 day
+  const days = openskyAuthenticated() ? 10 : 2;
+  console.log(
+    `  OpenSky (${openskyAuthenticated() ? "authenticated" : "anonymous"}): departures ${icaoAirport} (callsign ${callsign}), last ${days} days…`,
+  );
   const flights: { icao24: string; firstSeen: number; callsign?: string }[] = [];
-  for (const [begin, end] of [
-    [now - 2 * 86400, now - 86400],
-    [now - 86400, now],
-  ]) {
+  for (let d = days; d >= 1; d--) {
+    const end = now - (d - 1) * 86400;
+    const begin = end - 86400;
     const r = await fetch(
       `https://opensky-network.org/api/flights/departure?airport=${icaoAirport}&begin=${begin}&end=${end}`,
+      { headers },
     );
     if (!r.ok) {
-      console.log(`  departures window failed (HTTP ${r.status}) — continuing`);
+      console.log(`  departures window day-${d} failed (HTTP ${r.status}) — continuing`);
       continue;
     }
     try {
@@ -93,6 +98,7 @@ async function fetchOpenSky(flightNo: string, route: FlightEntry) {
     }
     const tr = await fetch(
       `https://opensky-network.org/api/tracks/all?icao24=${f.icao24}&time=${f.firstSeen}`,
+      { headers },
     );
     if (!tr.ok) {
       console.log(`  track fetch failed for ${f.icao24} (HTTP ${tr.status})`);
