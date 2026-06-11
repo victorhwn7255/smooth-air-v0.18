@@ -1,0 +1,68 @@
+# --- dependencies ---
+node_modules/
+.pnp
+.pnp.*
+
+# --- next.js build output ---
+.next/
+out/
+build/
+dist/
+
+# --- environment & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- testing & coverage ---
+coverage/
+.nyc_output/
+*.lcov
+
+# --- typescript / tooling caches ---
+*.tsbuildinfo
+next-env.d.ts
+.eslintcache
+.turbo/
+
+# --- logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- deployment ---
+.vercel/
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+
+# --- editors / IDEs ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.history/
+
+# --- SmoothAir project-specific ---
+# raw ADS-B track downloads fed to the corridor baker (bulky, re-fetchable)
+tools/corridor-baker/input/
+# generated backtest results (re-runnable; the calibration log in references/ IS tracked)
+tools/validation/results/
+# runtime feedback data when using the local file driver (Phase 6)
+src/lib/data/feedback.json
+
+# NOTE — deliberately TRACKED (do not add):
+#   prompts/            agent instructions = project source
+#   references/         behavior/visual canon + calibration log
+#   tasks/              lessons.md & change-logs.md are cross-session agent memory
+#   src/lib/data/       flights, airports, regions, baked corridors = data-as-code
+# If prompts/ ever contains personal notes, ignore those files individually,
+# not the folder.
