@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import BriefingProse from "@/components/BriefingProse";
+import FeedbackRow from "@/components/FeedbackRow";
 import FlightForm, { type GenerateParams } from "@/components/FlightForm";
 import FlightRibbon from "@/components/FlightRibbon";
 import GradeCard from "@/components/GradeCard";
@@ -88,6 +89,13 @@ export default function Home() {
             )}
             <BriefingProse text={briefing.briefing} />
             <RouteTable b={briefing} />
+            {briefing.depUtcMs < Date.now() && (
+              <FeedbackRow
+                flight={briefing.flightNo}
+                date={briefing.depLocalDate}
+                briefingGrade={briefing.grade.label}
+              />
+            )}
           </>
         )}
 

@@ -116,6 +116,19 @@ export interface SigmetStatus {
   hits: number;
 }
 
+/** One post-flight feedback record (the future ground-truth dataset). */
+export interface FeedbackEntry {
+  flight: string;
+  /** departure date briefed, yyyy-mm-dd */
+  date: string;
+  /** the grade label the briefing showed */
+  briefingGrade: string;
+  actual: "smooth" | "light" | "bumpy" | "rough";
+  comment?: string;
+  /** UTC epoch ms when recorded */
+  receivedAt: number;
+}
+
 /** Full API payload returned by /api/briefing. */
 export interface Briefing {
   flightNo: string;
