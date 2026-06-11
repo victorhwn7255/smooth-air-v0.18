@@ -33,6 +33,8 @@ export interface Waypoint {
   /** UTC epoch ms the aircraft is at this point */
   utcMs: number;
   region: string;
+  /** cruise altitude from a baked corridor; undefined on great-circle routes */
+  altFt?: number;
 }
 
 /** One weather sample matched to a waypoint. All fields nullable (missing data). */
@@ -48,6 +50,7 @@ export interface WeatherSample {
   /** geopotential height at 250 hPa, m */
   gh250: number | null;
   gh300: number | null;
+  gh200: number | null;
   /** J/kg */
   cape: number | null;
   /** precipitation probability, % */
@@ -141,6 +144,7 @@ export interface Briefing {
   /** true when demo data was used instead of live weather */
   demo: boolean;
   dataSource: "gfs-openmeteo" | "demo";
+  corridorSource: "baked" | "great-circle";
   sigmet: SigmetStatus;
   /** UTC epoch ms when this briefing was generated */
   generatedAt: number;

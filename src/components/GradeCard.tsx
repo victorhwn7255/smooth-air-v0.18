@@ -58,6 +58,10 @@ export default function GradeCard({ b }: { b: Briefing }) {
               : "unavailable"}
         </span>
         <span className={`${chip} bg-white font-mono font-normal`}>
+          route:{" "}
+          {b.corridorSource === "baked" ? "baked tracks" : "great circle"}
+        </span>
+        <span className={`${chip} bg-white font-mono font-normal`}>
           updates every 6 h
         </span>
       </div>

@@ -42,6 +42,9 @@ export const config = {
   classSevere: 0.75,
   /** waypoints of smooth gap allowed inside a zone run */
   zoneGapMerge: 1,
+  /** baked-corridor altitude at/above which the 250/200 hPa shear pair is
+   *  used instead of 300/250 (Phase 5 altitude-aware scoring), ft */
+  highCruiseFt: 32000,
 
   // probability logistics (hand-anchored — see project notes)
   /** P(light+) = sigmoid(a + b·S) */

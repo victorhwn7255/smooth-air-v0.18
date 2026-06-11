@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import airportsJson from "@/lib/data/airports.json";
 import flightsJson from "@/lib/data/flights.json";
 import { config } from "@/lib/data/config";
@@ -24,6 +26,21 @@ const jsonError = (status: number, error: string) =>
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME_RE = /^\d{1,2}:\d{2}$/;
+
+/** Baked corridor points for a flight, or undefined (great-circle fallback). */
+async function loadBakedCorridor(flightNo: string) {
+  if (!flightNo) return undefined;
+  try {
+    const raw = await readFile(
+      join(process.cwd(), "src/lib/data/corridors", flightNo + ".json"),
+      "utf8",
+    );
+    const baked = JSON.parse(raw) as { points: [number, number, number][] };
+    return baked.points.map(([lat, lon, altFt]) => ({ lat, lon, altFt }));
+  } catch {
+    return undefined;
+  }
+}
 
 export async function GET(req: Request) {
   const sp = new URL(req.url).searchParams;
@@ -109,7 +126,8 @@ export async function GET(req: Request) {
     );
 
   // -- corridor → weather → scores → zones → narrative ---------------------
-  const { dist, wps } = buildCorridor(fromAp, toAp, depUtcMs, durationMin);
+  const baked = await loadBakedCorridor(flightNo);
+  const { dist, wps } = buildCorridor(fromAp, toAp, depUtcMs, durationMin, baked);
   const arrUtcMs = depUtcMs + durationMin * 60e3;
   let demo = false;
   let wx;
@@ -120,7 +138,7 @@ export async function GET(req: Request) {
     demo = true;
     wx = demoWeather(wps);
   }
-  const scores = wx.map(scoreWaypoint);
+  const scores = wx.map((s, i) => scoreWaypoint(s, wps[i].altFt));
   const zones = detectZones(wps, scores, widebody);
   const sigmet = demo
     ? { checked: false, hits: 0 }
@@ -150,6 +168,7 @@ export async function GET(req: Request) {
     briefing,
     demo,
     dataSource: demo ? "demo" : "gfs-openmeteo",
+    corridorSource: baked ? "baked" : "great-circle",
     sigmet,
     generatedAt: now,
   };

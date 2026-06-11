@@ -18,16 +18,19 @@ export function buildCorridor(
   toAp: LatLon,
   depUtcMs: number,
   durationMin: number,
-  bakedCorridor?: LatLon[],
+  bakedCorridor?: (LatLon & { altFt?: number })[],
 ): Corridor {
   const dist = gcKm(fromAp, toAp);
   const wps: Waypoint[] = [];
   if (bakedCorridor && bakedCorridor.length >= 2) {
-    // DECISION: a baked corridor supplies the geometry verbatim; fractions are
-    // spread evenly over its points (Phase 5 bakes points at uniform spacing).
-    const n = bakedCorridor.length - 1;
+    // baked geometry verbatim; per-point elapsed time by cumulative
+    // along-track distance fraction × duration
+    const cum = [0];
+    for (let i = 1; i < bakedCorridor.length; i++)
+      cum.push(cum[i - 1] + gcKm(bakedCorridor[i - 1], bakedCorridor[i]));
+    const total = cum[cum.length - 1];
     bakedCorridor.forEach((p, i) => {
-      const f = i / n;
+      const f = total > 0 ? cum[i] / total : 0;
       const elapsedH = (f * durationMin) / 60;
       wps.push({
         lat: +p.lat.toFixed(3),
@@ -36,6 +39,7 @@ export function buildCorridor(
         elapsedH,
         utcMs: depUtcMs + elapsedH * 3600e3,
         region: regionFor(p.lat, p.lon),
+        altFt: p.altFt,
       });
     });
     return { dist, wps };

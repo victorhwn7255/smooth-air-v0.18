@@ -36,6 +36,7 @@ export function demoWeather(wps: Waypoint[]): WeatherSample[] {
       wd200: null,
       gh250: 10400 + 120 * r(),
       gh300: 9220 + 120 * r(),
+      gh200: null,
       cape,
       pprob: Math.min(95, cape / 30 + 12 * r()),
     };

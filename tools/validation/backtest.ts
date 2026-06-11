@@ -40,6 +40,7 @@ const OM_VARS = [
   "wind_direction_200hPa",
   "geopotential_height_250hPa",
   "geopotential_height_300hPa",
+  "geopotential_height_200hPa",
   "cape",
   "precipitation_probability",
 ].join(",");
@@ -84,6 +85,7 @@ async function fetchHistorical(
         ws300: g("wind_speed_300hPa"), wd300: g("wind_direction_300hPa"),
         ws200: g("wind_speed_200hPa"), wd200: g("wind_direction_200hPa"),
         gh250: g("geopotential_height_250hPa"), gh300: g("geopotential_height_300hPa"),
+        gh200: g("geopotential_height_200hPa"),
         cape: g("cape"), pprob: g("precipitation_probability"),
       };
     });

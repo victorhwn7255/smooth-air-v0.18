@@ -77,3 +77,48 @@ describe("scoreWaypoint", () => {
     expect(s.S).toBe(0);
   });
 });
+
+describe("altitude-aware level selection (Phase 5)", () => {
+  // shear lives between 250 and 200 hPa only: 300/250 pair is calm,
+  // 250/200 pair is sheared
+  const layered = sample({
+    ws250: 80,
+    wd250: 270,
+    ws300: 78,
+    wd300: 270,
+    ws200: 150,
+    wd200: 270,
+    gh250: 10400,
+    gh300: 9200,
+    gh200: 11800,
+    cape: 0,
+    pprob: 0,
+  });
+
+  it("switches to the 250/200 pair at the 32,000 ft boundary", () => {
+    const low = scoreWaypoint(layered, 31999);
+    const high = scoreWaypoint(layered, 32000);
+    // 300/250: 2 kt over 1200 m → ~0.00086 s⁻¹; 250/200: 70 kt over 1400 m
+    expect(low.vws).toBeLessThan(0.001);
+    expect(high.vws).toBeCloseTo((70 * 0.514444) / 1400, 4);
+    expect(high.S).toBeGreaterThan(low.S);
+  });
+
+  it("keeps the jet term on ws250 in both modes", () => {
+    expect(scoreWaypoint(layered, 32000).jet).toBe(80);
+    expect(scoreWaypoint(layered, 31999).jet).toBe(80);
+  });
+
+  it("undefined altFt preserves Phase-1 behavior bit-for-bit", () => {
+    const inputs = [
+      sample({ ws250: 40, wd250: 270, ws300: 38, wd300: 270, gh250: 10400, gh300: 9200, cape: 0, pprob: 0 }),
+      sample({ ws250: 130, wd250: 270, ws300: 60, wd300: 270, gh250: 10400, gh300: 9200, cape: 0, pprob: 0 }),
+      sample({ ws250: 20, wd250: 0, ws300: 20, wd300: 0, gh250: 10400, gh300: 9200, cape: 2400, pprob: 70 }),
+      layered,
+    ];
+    for (const wx of inputs)
+      expect(scoreWaypoint(wx)).toStrictEqual(scoreWaypoint(wx, undefined));
+    // and the layered sample scored without altitude uses the 300/250 pair
+    expect(scoreWaypoint(layered).vws).toBeLessThan(0.001);
+  });
+});
