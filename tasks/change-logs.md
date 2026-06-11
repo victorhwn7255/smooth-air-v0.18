@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-06-11 — Post-MVP: SQ660 + Changi flight database
+
+- Added SQ660 (SIN→CTS 23:00, A350-900, verified:false) + CTS airport on user request.
+- `tools/flight-db/build-sin.ts`: generates `flights-generated.json` + `airports-generated.json` from observed WSSS traffic (OpenSky anonymous, cached daily windows) + VRS standing-data routes/airlines + mwgg/Airports tz data. depLocal = median observed takeoff (verified:false everywhere); widebody by >4,500 km heuristic; duration by distance estimate; curated files always win (`flightDb.ts`).
+- UI: "Knows:" hint + 404 message show generated count; manual selects sorted; narrowbody-aware aircraft fallback on grade card.
+- First build returned 0 entries — OpenSky anonymous daily credits exhausted (x-rate-limit-retry-after ≈ 19 h). RERUN NEEDED: `npx tsx tools/flight-db/build-sin.ts` after ~06:30 SGT 2026-06-12 (then `npm test` + commit the generated JSONs).
+- 43/43 tests; app verified to degrade gracefully with empty database.
+
 ## 2026-06-11 — Phase 6: Ship (feedback loop + hardening; deploy NEEDS-HUMAN)
 
 - Feedback: `feedbackStore.ts` (file driver + Upstash REST driver by env presence, append-only), `POST /api/feedback` (validated, 503 friendly when storage unavailable), `GET /api/feedback/export` (?key= gate via FEEDBACK_EXPORT_KEY), one-tap FeedbackRow shown only for past departures, `.env.example` documenting the single permitted credential.
