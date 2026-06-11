@@ -286,6 +286,13 @@
   "city": "Fukuoka",
   "tz": "Asia/Tokyo"
  },
+ "GAU": {
+  "code": "GAU",
+  "lat": 26.106,
+  "lon": 91.586,
+  "city": "Guwahati",
+  "tz": "Asia/Kolkata"
+ },
  "HAK": {
   "code": "HAK",
   "lat": 19.935,
@@ -355,6 +362,13 @@
   "lon": 101.092,
   "city": "Ipoh",
   "tz": "Asia/Kuala_Lumpur"
+ },
+ "JED": {
+  "code": "JED",
+  "lat": 21.68,
+  "lon": 39.157,
+  "city": "Jeddah",
+  "tz": "Asia/Riyadh"
  },
  "JJN": {
   "code": "JJN",
@@ -454,6 +468,13 @@
   "city": "Guiyang",
   "tz": "Asia/Shanghai"
  },
+ "LBJ": {
+  "code": "LBJ",
+  "lat": -8.487,
+  "lon": 119.889,
+  "city": "Labuan Bajo-Flores Island",
+  "tz": "Asia/Makassar"
+ },
  "LGK": {
   "code": "LGK",
   "lat": 6.33,
@@ -523,6 +544,13 @@
   "lon": 8.728,
   "city": "Milan",
   "tz": "Europe/Rome"
+ },
+ "MYY": {
+  "code": "MYY",
+  "lat": 4.322,
+  "lon": 113.987,
+  "city": "Miri",
+  "tz": "Asia/Kuching"
  },
  "NGO": {
   "code": "NGO",
@@ -747,6 +775,13 @@
   "lon": 80.797,
   "city": "Vijayawada",
   "tz": "Asia/Kolkata"
+ },
+ "VIE": {
+  "code": "VIE",
+  "lat": 48.11,
+  "lon": 16.57,
+  "city": "Vienna",
+  "tz": "Europe/Vienna"
  },
  "WUH": {
   "code": "WUH",

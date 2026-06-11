@@ -73,21 +73,27 @@ async function fetchOpenSkyDay(kind: "departure" | "arrival", dayOffset: number)
   console.log(`  cached ${name}`);
 }
 
-/* ---- 1b. AeroDataBox: the PUBLISHED departure board (preferred source) -- */
+/* ---- 1b. AeroDataBox: the PUBLISHED schedule boards (preferred source) -- */
+interface AdbLeg {
+  airport?: { iata?: string };
+  scheduledTime?: { local?: string; utc?: string };
+}
 interface AdbFlight {
   number?: string;
-  codeshareStatus?: string;
-  movement?: {
-    airport?: { iata?: string };
-    scheduledTime?: { local?: string };
-  };
+  departure?: AdbLeg;
+  arrival?: AdbLeg;
   aircraft?: { model?: string };
 }
 
 const WIDEBODY_MODEL = /A3[345]0|A380|7[456-8]7|777/i;
 
-/** Next 24h of scheduled SIN departures, in two 12h windows (cached per window). */
-async function fetchAdbDepartures(): Promise<AdbFlight[]> {
+/**
+ * Next 24h of the SIN board in two 12h windows (cached per window).
+ * withLeg=true → each flight carries BOTH ends' scheduled times, so inbound
+ * flights get their published origin departure time and every flight gets a
+ * true scheduled duration.
+ */
+async function fetchAdbBoard(direction: "Departure" | "Arrival"): Promise<AdbFlight[]> {
   const key = process.env.RAPIDAPI_KEY;
   if (!key) {
     console.log("  no RAPIDAPI_KEY — skipping AeroDataBox schedule board");
@@ -105,14 +111,14 @@ async function fetchAdbDepartures(): Promise<AdbFlight[]> {
       })
         .format(d)
         .replace(" ", "T");
-    const name = `adb-dep-${fmt(from).slice(0, 13)}.json`;
+    const name = `adb-leg-${direction}-${fmt(from).slice(0, 13)}.json`;
     const body = await cached(name, async () => {
       // Basic plan enforces a per-second rate limit — space calls out and
-      // retry once on 429
+      // retry on 429
       for (let attempt = 0; ; attempt++) {
         await sleep(1500);
         const r = await fetch(
-          `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${HOME}/${fmt(from)}/${fmt(to)}?direction=Departure&withCancelled=false&withCodeshared=false&withCargo=false&withPrivate=false`,
+          `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${HOME}/${fmt(from)}/${fmt(to)}?direction=${direction}&withLeg=true&withCancelled=false&withCodeshared=false&withCargo=false&withPrivate=false`,
           {
             headers: {
               "X-RapidAPI-Key": key,
@@ -130,13 +136,17 @@ async function fetchAdbDepartures(): Promise<AdbFlight[]> {
       }
     });
     try {
-      out.push(...(JSON.parse(body).departures ?? []));
+      const j = JSON.parse(body);
+      out.push(...(j.departures ?? []), ...(j.arrivals ?? []));
     } catch {
       console.log(`  unparseable ADB window ${name}`);
     }
   }
   return out;
 }
+
+/** "2026-06-11 06:30Z" → epoch ms (NaN if absent). */
+const adbUtcMs = (s?: string) => (s ? Date.parse(s.replace(" ", "T")) : NaN);
 
 function loadObservations(): { dep: OsFlight[]; arr: OsFlight[] } {
   const dep: OsFlight[] = [];
@@ -311,36 +321,51 @@ async function main() {
     };
   }
 
-  // overlay the published departure board — scheduled times beat observed
-  console.log("Fetching AeroDataBox scheduled departures (next 24h)…");
-  let adbCount = 0;
-  try {
-    for (const f of await fetchAdbDepartures()) {
-      const flightNo = (f.number || "").replace(/\s+/g, "").toUpperCase();
-      const dest = f.movement?.airport?.iata?.toUpperCase();
-      const local = f.movement?.scheduledTime?.local; // "2026-06-12 08:15+08:00"
-      if (!/^[A-Z0-9]{2}\d{1,4}$/.test(flightNo) || !dest || !local) continue;
-      if (curatedFl[flightNo] || dest === HOME) { skipped.curated++; continue; }
-      const ap = curatedAp[dest] ?? airports.get(dest);
-      if (!ap) { skipped.noAirport++; continue; }
-      if (!curatedAp[dest]) neededAirports.add(dest);
-      const dist = gcKm(curatedAp[HOME], { lat: ap.lat, lon: ap.lon });
-      const model = f.aircraft?.model || "";
-      flights[flightNo] = {
-        from: HOME,
-        to: dest,
-        depLocal: local.slice(11, 16),
-        durationMin: Math.round((dist / config.cruiseKmh) * 60) + 40,
-        aircraft: model,
-        widebody: model ? WIDEBODY_MODEL.test(model) : dist > WIDEBODY_KM,
-        verified: false,
-      };
-      adbCount++;
+  // overlay the published boards — scheduled times beat observed; withLeg
+  // gives the origin departure time for inbound flights and true durations
+  for (const direction of ["Departure", "Arrival"] as const) {
+    console.log(`Fetching AeroDataBox scheduled ${direction.toLowerCase()}s (next 24h)…`);
+    let adbCount = 0;
+    try {
+      for (const f of await fetchAdbBoard(direction)) {
+        const flightNo = (f.number || "").replace(/\s+/g, "").toUpperCase();
+        if (!/^[A-Z0-9]{2}\d{1,4}$/.test(flightNo)) continue;
+        if (curatedFl[flightNo]) { skipped.curated++; continue; }
+        // the queried airport's leg has no airport object; the remote end does
+        const remote = (
+          direction === "Departure" ? f.arrival : f.departure
+        )?.airport?.iata?.toUpperCase();
+        const depLocalFull = f.departure?.scheduledTime?.local;
+        if (!remote || remote === HOME || !depLocalFull) continue;
+        const ap = curatedAp[remote] ?? airports.get(remote);
+        if (!ap) { skipped.noAirport++; continue; }
+        if (!curatedAp[remote]) neededAirports.add(remote);
+        const dist = gcKm(curatedAp[HOME], { lat: ap.lat, lon: ap.lon });
+        const schedMin = Math.round(
+          (adbUtcMs(f.arrival?.scheduledTime?.utc) -
+            adbUtcMs(f.departure?.scheduledTime?.utc)) /
+            60000,
+        );
+        const model = f.aircraft?.model || "";
+        flights[flightNo] = {
+          from: direction === "Departure" ? HOME : remote,
+          to: direction === "Departure" ? remote : HOME,
+          depLocal: depLocalFull.slice(11, 16),
+          durationMin:
+            Number.isFinite(schedMin) && schedMin > 0
+              ? schedMin
+              : Math.round((dist / config.cruiseKmh) * 60) + 40,
+          aircraft: model,
+          widebody: model ? WIDEBODY_MODEL.test(model) : dist > WIDEBODY_KM,
+          verified: false,
+        };
+        adbCount++;
+      }
+    } catch (e) {
+      console.log(`  AeroDataBox ${direction} failed: ${e} — keeping observed data`);
     }
-  } catch (e) {
-    console.log(`  AeroDataBox failed: ${e} — keeping observed data only`);
+    console.log(`  ${adbCount} scheduled ${direction.toLowerCase()}s applied`);
   }
-  console.log(`  ${adbCount} scheduled departures applied`);
 
   const genAirports: Record<string, Airport> = {};
   for (const code of [...neededAirports].sort()) {
