@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Slock design tokens — applied verbatim from §6 of
+ * references/slock-design-system.md (Tailwind 4 @theme form).
+ * 0px radius and 2px black borders are intentional; do not "fix".
+ */
+@theme {
+  --radius-*: initial;
+  --radius-none: 0px;
+  --radius-full: 9999px;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-*: initial;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+
+  --font-weight-*: initial;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --color-*: initial;
+  --color-primary: #ffd700;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-pink: #ff6b9d;
+  --color-cyan: #5bc0eb;
+  --color-lavender: #c4b5fd;
+  --color-salmon: #f4845f;
+  --color-teal: #2ec4b6;
+  --color-cream: #fff8e7;
+  --color-peach: #ffe5cc;
+  --color-code: #1e1e2e;
+  --color-success: #2dc653;
+  --color-warning: #ff9f1c;
+  --color-error: #e63946;
+  --color-text-secondary: #6b6b6b;
+  --color-text-tertiary: #767676;
+  --color-disabled: #d4d4d4;
+
+  --shadow-*: initial;
+  --shadow-brutal: 2px 2px 0px 0px #000000;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-black);
+}
+
+::placeholder {
+  color: var(--color-text-tertiary);
 }
