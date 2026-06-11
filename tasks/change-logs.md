@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-06-11 — Post-MVP: API keys approved (owner amendment to zero-key rule)
+
+- Owner approved credentials for LOCAL TOOLS ONLY (deployed app stays keyless apart from the already-sanctioned Upstash): `.env.local` carries RAPIDAPI_KEY + OPENSKY_CLIENT_ID/SECRET (verified live). `tools/env.ts` loader + `tools/opensky.ts` OAuth helper.
+- Changi DB build: AeroDataBox published departure board (next 24h, 2 calls, per-second throttle + 429 retry) overlays OpenSky observations (7 authenticated daily windows) → **599 flights / 112 airports** generated; 493 entries carry published scheduled times. OpenSky WSSS *arrivals* data is sparse (mostly 404) — DB is departure-heavy; inbound flights mostly come from the 11 observed arrivals.
+- Corridors re-baked with authenticated track history: SQ345 from 10 tracks (max dev 378 km), SQ321 from 3 real SIA321 tracks.
+- Backtest run 5: incidents back to 2/2 light+ (run-4 MISS was single-track routing noise), smooth FA 1/13 (8%), p99 0.583. Calibration log updated.
+- 43/43 tests green; QF2 + EK353 briefed live through the app.
+
 ## 2026-06-11 — Post-MVP: SQ660 + Changi flight database
 
 - Added SQ660 (SIN→CTS 23:00, A350-900, verified:false) + CTS airport on user request.

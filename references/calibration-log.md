@@ -107,6 +107,25 @@ moving the false-alarm rate.
 Action: accumulate more tracks (rerun the baker on later days; cache keeps
 them) before treating baked-corridor incident replays as authoritative.
 
+### Run 5 — multi-track corridors (authenticated OpenSky, 2026-06-11)
+
+Owner approved API credentials (amending the original zero-key rule):
+OpenSky OAuth gives ~10 days of usable track history per run. SQ345 re-baked
+from a true 10-track median (+1.2% vs GC, max dev 378 km); SQ321 from 3 real
+SIA321 tracks (+2.1%, max dev 876 km).
+
+| metric | run 4 (1-track bakes) | run 5 (multi-track) |
+|---|---|---|
+| incident hit-rate light+ | 1/2 | **2/2** |
+| smooth false-alarm (mod+) | 2/13 (15%) | **1/13 (8%)** |
+| S percentiles | 0.092/0.298/0.675 | 0.094/0.292/**0.583** |
+
+The run-4 SQ321 MISS was indeed single-track routing noise: the 3-track
+median crosses the expected-region keywords again. Multi-track medians also
+shaved the saturated control peaks (one fewer false alarm, p99 down). This
+closes run-4's "accumulate more tracks" action; corridors should be
+re-baked periodically as cheap accuracy maintenance.
+
 ### Open questions
 
 1. Both remaining mod+ "false alarms" are saturated subtropical-jet maxima
