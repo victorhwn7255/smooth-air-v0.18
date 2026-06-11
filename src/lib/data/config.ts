@@ -11,8 +11,10 @@ export const config = {
   // severity ramps ............................................
   /** vertical wind shear ramp low end, s^-1 */
   shearLo: 0.003,
-  /** vertical wind shear ramp high end, s^-1 */
-  shearHi: 0.013,
+  /** vertical wind shear ramp high end, s^-1 — Phase 4 backtest: v1's 0.013
+   *  saturated on ordinary jet crossings (S p99=1.0, 85% smooth-control
+   *  false alarms); raised so routine shear scores mid-range */
+  shearHi: 0.02,
   /** 250 hPa wind ramp low end, kt */
   jetLo: 60,
   /** 250 hPa wind ramp high end, kt */
