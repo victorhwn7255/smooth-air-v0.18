@@ -19,7 +19,7 @@ and a collapsible **route table** for the curious. After landing, a one-tap
 feedback row asks "How was it?". The emotional job: replace dread-of-the-
 unknown with calm, specific, honest expectations. The audience is family
 members on their phones, possibly anxious, possibly older — clarity beats
-cleverness everywhere.
+cleverness every where.
 
 ## 2. Tech context
 

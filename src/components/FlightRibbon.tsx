@@ -1,6 +1,15 @@
 import type { Briefing } from "@/lib/types";
-import { fmtH } from "@/lib/pipeline/narrative";
+import { fmtDur, fmtH } from "@/lib/pipeline/narrative";
+import { numSq } from "./ZoneCard";
 
+const chip =
+  "inline-block whitespace-nowrap border-2 border-black px-2.5 py-0.5 text-xs font-bold uppercase";
+
+/**
+ * Numbered ribbon (UX debt #1): zone bands carry number squares and a
+ * flow-layout legend replaces absolutely-positioned ticks — nothing can
+ * collide at any width or zone count. Numbers repeat on the zone cards.
+ */
 export default function FlightRibbon({ b }: { b: Briefing }) {
   const total = b.waypoints[b.waypoints.length - 1].elapsedH;
 
@@ -15,58 +24,45 @@ export default function FlightRibbon({ b }: { b: Briefing }) {
         <span>↓ {b.to}</span>
       </div>
       <div className="relative h-14 overflow-hidden border-2 border-black bg-success">
-        {b.zones.map((z, i) => {
-          const widthPct = Math.max(3, ((z.endH - z.startH) / total) * 100);
-          return (
-            <div
-              key={i}
-              className={`absolute inset-y-0 border-x-2 border-black ${
-                z.cls === "moderate" || z.cls === "severe"
-                  ? "bg-error"
-                  : "bg-warning"
-              }`}
-              style={{
-                left: (z.startH / total) * 100 + "%",
-                width: widthPct + "%",
-              }}
-            >
-              {/* DECISION: label only bands wide enough to hold it — narrow
-                  bands overlapped illegibly; the ticks below still name them */}
-              {widthPct >= 10 && (
-                <span className="absolute left-1/2 top-1 -translate-x-1/2 whitespace-nowrap text-xs font-bold uppercase">
-                  {z.cls}
-                </span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div className="relative mt-1.5 h-14 font-mono text-xs">
-        <span className="absolute left-0 top-0 text-text-secondary">
-          TAKEOFF
-        </span>
-        <span className="absolute right-0 top-0 text-text-secondary">
-          LANDING
-        </span>
-        {b.zones.map((z, i) => {
-          const mid = (z.startH + z.endH) / 2;
-          return (
-            <span
-              key={i}
-              className="absolute -translate-x-1/2 whitespace-nowrap text-center font-bold"
-              // stagger alternate ticks so labels stay legible at 360px
-              style={{
-                left: Math.min(92, Math.max(8, (mid / total) * 100)) + "%",
-                top: i % 2 ? "26px" : "0",
-              }}
-            >
-              {z.region}
-              <small className="block text-xs font-normal text-text-secondary">
-                {fmtH(mid).replace("about ", "~")}
-              </small>
+        {b.zones.map((z, i) => (
+          <div
+            key={i}
+            className={`absolute inset-y-0 border-x-2 border-black ${
+              z.cls === "moderate" || z.cls === "severe"
+                ? "bg-error"
+                : "bg-warning"
+            }`}
+            style={{
+              left: (z.startH / total) * 100 + "%",
+              width: Math.max(3, ((z.endH - z.startH) / total) * 100) + "%",
+            }}
+          >
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <span className={numSq}>{i + 1}</span>
             </span>
-          );
-        })}
+          </div>
+        ))}
+      </div>
+      <div className="mt-1.5 flex justify-between font-mono text-xs font-bold text-text-secondary">
+        <span>TAKEOFF {b.depLocalTime}</span>
+        <span>LANDING</span>
+      </div>
+      <div className="mt-2.5 flex flex-col gap-1.5">
+        {b.zones.map((z, i) => (
+          <div key={i} className="flex flex-wrap items-center gap-2.5 text-sm">
+            <span className={numSq}>{i + 1}</span>
+            <span className="whitespace-nowrap font-bold">{z.region}</span>
+            <span className="whitespace-nowrap font-mono text-xs text-text-secondary">
+              {fmtH((z.startH + z.endH) / 2).replace("about ", "~")} ·{" "}
+              {fmtDur(Math.max(0.2, z.endH - z.startH))}
+            </span>
+            <span
+              className={`${chip} ${z.cls === "light" ? "bg-warning" : "bg-error"}`}
+            >
+              {z.cls}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
