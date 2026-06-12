@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BriefingProse from "@/components/BriefingProse";
 import FeedbackRow from "@/components/FeedbackRow";
 import FlightForm, { type GenerateParams } from "@/components/FlightForm";
@@ -49,10 +49,26 @@ function openWaterLocator(b: Briefing, i0: number, i1: number): string | undefin
   return undefined;
 }
 
+/** Shared-link params (?flight=… or ?from=&to=&time=, optional &date=). */
+function paramsFromUrl(): GenerateParams | null {
+  const sp = new URLSearchParams(window.location.search);
+  const date = sp.get("date") ?? "";
+  const flight = sp.get("flight");
+  if (flight) return { flight, date };
+  const from = sp.get("from"),
+    to = sp.get("to"),
+    time = sp.get("time");
+  if (from && to && time) return { from, to, time, date };
+  return null;
+}
+
 export default function Home() {
   const [busy, setBusy] = useState(false);
   const [briefing, setBriefing] = useState<Briefing | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [initialParams, setInitialParams] = useState<GenerateParams | null>(
+    null,
+  );
   const [manual, setManual] = useState(false);
   const [stamp, setStamp] = useState("");
 
@@ -72,6 +88,10 @@ export default function Home() {
         return;
       }
       setBriefing(j as Briefing);
+      // DECISION: replaceState (not pushState) — the address bar mirrors the
+      // shown briefing for sharing/bookmarking without filling history with
+      // stale briefing states the back button couldn't faithfully restore
+      window.history.replaceState(null, "", "?" + q.toString());
       setStamp(
         "generated " +
           new Intl.DateTimeFormat("en-GB", {
@@ -88,6 +108,22 @@ export default function Home() {
       setBusy(false);
     }
   }
+
+  // a shared deep link auto-generates its briefing on first load.
+  // Params are read post-mount (never during render) so the first client
+  // render matches SSR — no hydration mismatch.
+  const autoRan = useRef(false);
+  useEffect(() => {
+    if (autoRan.current) return;
+    autoRan.current = true;
+    const p = paramsFromUrl();
+    if (p) {
+      setInitialParams(p);
+      if (!p.flight) setManual(true);
+      generate(p);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -106,9 +142,13 @@ export default function Home() {
       </header>
 
       <main className="mx-auto flex max-w-[880px] flex-col gap-5 px-5 pb-12 pt-6 max-[640px]:px-3.5 max-[640px]:pb-10 max-[640px]:pt-4">
+        {/* key remounts the form when shared-link params land post-mount,
+            so its useState initializers pick them up */}
         <FlightForm
+          key={initialParams ? "shared" : "default"}
           busy={busy}
           manual={manual}
+          initial={initialParams}
           onToggleManual={() => setManual(!manual)}
           onGenerate={generate}
         />

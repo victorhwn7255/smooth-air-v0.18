@@ -36,21 +36,26 @@ const ghostCls =
 export default function FlightForm({
   busy,
   manual,
+  initial,
   onToggleManual,
   onGenerate,
 }: {
   busy: boolean;
   manual: boolean;
+  /** shared-link params — prefill the form so it mirrors the briefing */
+  initial?: GenerateParams | null;
   onToggleManual: () => void;
   onGenerate: (p: GenerateParams) => void;
 }) {
-  const [raw, setRaw] = useState("SQ345");
+  const [raw, setRaw] = useState(initial?.flight ?? "SQ345");
   const [dateOpen, setDateOpen] = useState(false);
-  const [dateOverride, setDateOverride] = useState("");
-  const [mFrom, setMFrom] = useState("SIN");
-  const [mTo, setMTo] = useState("ZRH");
-  const [mTime, setMTime] = useState("11:40");
-  const [mDate, setMDate] = useState("");
+  const [dateOverride, setDateOverride] = useState(
+    initial?.flight ? (initial.date ?? "") : "",
+  );
+  const [mFrom, setMFrom] = useState(initial?.from ?? "SIN");
+  const [mTo, setMTo] = useState(initial?.to ?? "ZRH");
+  const [mTime, setMTime] = useState(initial?.time ?? "11:40");
+  const [mDate, setMDate] = useState(initial?.from ? (initial.date ?? "") : "");
 
   const fno = raw.replace(/\s+/g, "").toUpperCase();
   const flight = FLIGHTS[fno];
