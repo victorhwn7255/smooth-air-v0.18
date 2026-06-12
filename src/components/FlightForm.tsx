@@ -31,7 +31,7 @@ const labelCls =
 const inputCls =
   "w-full border-2 border-black bg-white px-2.5 py-2 text-sm font-normal focus:border-pink focus:outline-none focus-visible:outline-2 focus-visible:outline-pink";
 const ghostCls =
-  "cursor-pointer text-sm font-bold underline hover:bg-pink transition-colors duration-50";
+  "cursor-pointer whitespace-nowrap px-0.5 font-bold underline transition-colors duration-50 hover:bg-pink";
 
 export default function FlightForm({
   busy,
@@ -45,7 +45,7 @@ export default function FlightForm({
   onGenerate: (p: GenerateParams) => void;
 }) {
   const [raw, setRaw] = useState("SQ345");
-  const [showDate, setShowDate] = useState(false);
+  const [dateOpen, setDateOpen] = useState(false);
   const [dateOverride, setDateOverride] = useState("");
   const [mFrom, setMFrom] = useState("SIN");
   const [mTo, setMTo] = useState("ZRH");
@@ -85,10 +85,22 @@ export default function FlightForm({
     else onGenerate({ flight: fno, date });
   };
 
+  const airportOpts = Object.entries(AIRPORTS)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([c, a]) => (
+      <option key={c} value={c}>
+        {c} — {a.city}
+      </option>
+    ));
+
   return (
-    <form onSubmit={submit} className="border-2 border-black bg-white p-4">
-      <div className="grid grid-cols-[1fr_auto] items-end gap-3 max-[560px]:grid-cols-1">
-        <label className={labelCls}>
+    <form
+      onSubmit={submit}
+      aria-label="Flight input"
+      className="border-2 border-black bg-white p-4"
+    >
+      <div className="flex flex-wrap items-end gap-3">
+        <label className={`${labelCls} min-w-[150px] flex-1`}>
           Flight number
           <input
             className={inputCls}
@@ -96,7 +108,7 @@ export default function FlightForm({
             onChange={(e) => {
               setRaw(e.target.value);
               setDateOverride("");
-              setShowDate(false);
+              setDateOpen(false);
             }}
             placeholder="SQ345"
             autoCapitalize="characters"
@@ -107,63 +119,73 @@ export default function FlightForm({
         <button
           type="submit"
           disabled={busy}
-          className="cursor-pointer border-2 border-black bg-cyan px-4 py-1.5 text-xl font-bold shadow-brutal transition-colors duration-50 hover:bg-pink active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:cursor-wait disabled:bg-disabled disabled:active:translate-x-0 disabled:active:translate-y-0 disabled:active:shadow-brutal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+          className="cursor-pointer border-2 border-black bg-cyan px-4 py-1.5 text-xl font-bold shadow-brutal transition-colors duration-50 hover:bg-pink active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:cursor-wait disabled:bg-disabled disabled:active:translate-x-0 disabled:active:translate-y-0 disabled:active:shadow-brutal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink max-[640px]:basis-full"
         >
           {busy ? "Working…" : "Generate briefing"}
         </button>
       </div>
 
-      {!manual && flight && nextDep && (
-        <p className="mt-3 text-sm">
-          <b>
-            Next departure: {fmtDate(date)}, {flight.depLocal} from{" "}
-            {AIRPORTS[flight.from].city}
-          </b>
-          {flight.verified === false && (
-            <span className="text-text-secondary">
-              {" "}
-              — departs {flight.depLocal}, still right? schedule unverified
-            </span>
-          )}{" "}
-          {!showDate && (
-            <button
-              type="button"
-              className={ghostCls}
-              onClick={() => {
-                setDateOverride(nextDep);
-                setShowDate(true);
-              }}
-            >
-              change date
-            </button>
-          )}
-        </p>
-      )}
-
-      {!manual && showDate && (
-        <label className={`${labelCls} mt-3 max-w-56`}>
-          Departure date
-          <input
-            type="date"
-            className={inputCls}
-            value={dateOverride}
-            onChange={(e) => setDateOverride(e.target.value)}
-          />
-        </label>
-      )}
-
       <div className="mt-2.5 font-mono text-xs text-text-secondary">
         Knows: {CURATED_FLIGHT_NOS.join(", ")}
         {GENERATED_FLIGHT_COUNT > 0 &&
-          ` + ${GENERATED_FLIGHT_COUNT} observed Changi flights`}{" "}
-        &nbsp;·&nbsp;{" "}
+          ` + ${GENERATED_FLIGHT_COUNT.toLocaleString()} observed Changi flights`}{" "}
+        ·{" "}
         <button type="button" className={ghostCls} onClick={onToggleManual}>
           enter a route manually
         </button>
       </div>
 
+      {!manual && flight && nextDep && (
+        <div>
+          {/* next-departure statement — separate line, ONE affordance */}
+          <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t-2 border-black pt-3 text-lg">
+            <span>
+              Next departure: <b className="whitespace-nowrap">{fmtDate(date)}, {flight.depLocal} from {AIRPORTS[flight.from].city}</b>
+            </span>
+            {flight.verified !== false && !dateOpen && (
+              <button
+                type="button"
+                className={ghostCls}
+                onClick={() => setDateOpen(true)}
+              >
+                change date
+              </button>
+            )}
+          </div>
+          {flight.verified === false && (
+            <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
+              <span className="inline-block whitespace-nowrap border-2 border-black bg-warning px-2.5 py-0.5 text-xs font-bold">
+                SCHEDULE UNVERIFIED
+              </span>
+              <span>departs {flight.depLocal} — still right?</span>
+              {/* DECISION: one affordance serves both confirm and change */}
+              {!dateOpen && (
+                <button
+                  type="button"
+                  className={ghostCls}
+                  onClick={() => setDateOpen(true)}
+                >
+                  confirm or change date
+                </button>
+              )}
+            </div>
+          )}
+          {dateOpen && (
+            <label className={`${labelCls} mt-2.5 max-w-[220px]`}>
+              Departure date
+              <input
+                type="date"
+                className={inputCls}
+                value={dateOverride || nextDep}
+                onChange={(e) => setDateOverride(e.target.value)}
+              />
+            </label>
+          )}
+        </div>
+      )}
+
       {manual && (
-        <div className="mt-3.5 grid grid-cols-2 gap-3 border-t-2 border-black pt-3.5 sm:grid-cols-4">
+        <div className="mt-3.5 grid grid-cols-4 gap-3 border-t-2 border-black pt-3.5 max-[640px]:grid-cols-2">
           <label className={labelCls}>
             From
             <select
@@ -171,13 +193,7 @@ export default function FlightForm({
               value={mFrom}
               onChange={(e) => setMFrom(e.target.value)}
             >
-              {Object.entries(AIRPORTS)
-                .sort(([a], [b]) => a.localeCompare(b))
-                .map(([c, a]) => (
-                  <option key={c} value={c}>
-                    {c} — {a.city}
-                  </option>
-                ))}
+              {airportOpts}
             </select>
           </label>
           <label className={labelCls}>
@@ -187,13 +203,7 @@ export default function FlightForm({
               value={mTo}
               onChange={(e) => setMTo(e.target.value)}
             >
-              {Object.entries(AIRPORTS)
-                .sort(([a], [b]) => a.localeCompare(b))
-                .map(([c, a]) => (
-                  <option key={c} value={c}>
-                    {c} — {a.city}
-                  </option>
-                ))}
+              {airportOpts}
             </select>
           </label>
           <label className={labelCls}>
