@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-06-12 — UI redesign (design handoff v2, winners locked)
+
+- Implemented `design_handoff_smoothair_slock/` spec across 8 components, one commit each: tokens (surface-alt/cream, skel-pulse keyframes, routewrap scrollbar CSS, reduced-motion guard), FlightForm (flex controls, separated statement/unverified lines with ONE affordance each, change-date reveal), page (notice roles, working skeleton, open-water locator derivation), GradeCard (stacked flight line, sub-line, departed chip), FlightRibbon (numbered bands + flow legend, ticks retired), ZoneCard (numbered, open-water presentation), RouteTable (sticky first col + square scrollbar), FeedbackRow (locked copy), error.tsx.
+- DECISION: working notice shows "Fetching winds aloft…" without the mock's canned live counts — the real API is one request; no fabricated progress.
+- Acceptance (all RUN): 43/43 tests, build clean, three compliance greps empty, Lighthouse a11y snapshot **100 on the briefing view** (flow API), 360px overflow-free with collision-free 6-zone legend (Rough+SIGMET scenario injected from the handoff data), screenshots matched against reference PNGs; unverified/404/landed states verified in-browser.
+
 ## 2026-06-11 — Post-MVP: inbound Changi flights
 
 - AeroDataBox boards now fetched with `withLeg=true` for BOTH directions: each flight carries both ends' scheduled times, so inbound flights get their published origin departure time (no per-flight calls needed — 4 board calls total) and all entries get true scheduled durations instead of distance estimates.
