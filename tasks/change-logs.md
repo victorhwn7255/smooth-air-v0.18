@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-06-12 — Shareable deep links (URL state)
+
+- page.tsx: successful generates write `?flight=…&date=…` (or `?from=&to=&time=&date=`) via replaceState (DECISION: not pushState — no stale history states); on load, params auto-generate the briefing post-mount (no hydration mismatch) and the form remounts prefilled; manual-route links auto-open manual mode.
+- Share button now sends a real deep link: recipient opens the exact briefing against the live forecast. Dateless links (`?flight=SQ345`) are evergreen next-departure links.
+- Verified (RUN): 43/43 tests, build clean; 7 browser checks — flight + manual deep links auto-generate, form prefill both modes, address-bar sync, share payload contains params, unknown-flight link degrades to honest 404 + manual fallback; zero page errors (hydration fixed by post-mount param read).
+- lessons.md started: build-vs-dev `.next` clobber (bit twice), hydration-safe URL reads, headless navigator.share hang.
+
 ## 2026-06-12 — Design update: ribbon pictograms + share button
 
 - `src/components/icons.tsx`: Lucide plane-takeoff / plane-landing / send inlined verbatim (ISC; no new dependency).
