@@ -1,5 +1,6 @@
 import type { Briefing } from "@/lib/types";
 import { fmtDur, fmtH } from "@/lib/pipeline/narrative";
+import { PlaneLandingIcon, PlaneTakeoffIcon } from "./icons";
 import { numSq } from "./ZoneCard";
 
 const chip =
@@ -18,10 +19,14 @@ export default function FlightRibbon({ b }: { b: Briefing }) {
       aria-label="Flight timeline"
       className="border-2 border-black bg-white p-4"
     >
-      <div className="mb-2 flex justify-between font-mono text-xs font-bold">
-        <span>{b.from} ↑</span>
+      <div className="mb-2 flex items-center justify-between font-mono text-xs font-bold">
+        <span className="inline-flex items-center gap-1.5">
+          {b.from} <PlaneTakeoffIcon />
+        </span>
         <span>FLIGHT TIMELINE</span>
-        <span>↓ {b.to}</span>
+        <span className="inline-flex items-center gap-1.5">
+          <PlaneLandingIcon /> {b.to}
+        </span>
       </div>
       <div className="relative h-14 overflow-hidden border-2 border-black bg-success">
         {b.zones.map((z, i) => (
@@ -43,10 +48,8 @@ export default function FlightRibbon({ b }: { b: Briefing }) {
           </div>
         ))}
       </div>
-      <div className="mt-1.5 flex justify-between font-mono text-xs font-bold text-text-secondary">
-        <span>TAKEOFF {b.depLocalTime}</span>
-        <span>LANDING</span>
-      </div>
+      {/* TAKEOFF/LANDING text row removed (owner's call) — the pictograms
+          carry the meaning; departure time lives on the grade card */}
       <div className="mt-2.5 flex flex-col gap-1.5">
         {b.zones.map((z, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2.5 text-sm">
