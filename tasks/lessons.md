@@ -3,6 +3,15 @@
 Protocol: after a correction or non-obvious root cause, add an entry —
 Mistake → Root cause → Fix → Rule. The Rule is what matters.
 
+## 2026-06-12 — git is the owner's, entirely
+
+- **Correction:** owner reiterated: agents make NO commits — not just no
+  pushes/PRs. Earlier goals instructed per-task local commits, which created
+  committed-but-invisible work that confused the owner's VS Code view twice.
+- **Rule:** leave all changes uncommitted in the working tree unless the
+  owner's current instruction explicitly says to commit. The owner stages,
+  commits, and pushes everything themselves.
+
 ## 2026-06-12 — `npm run build` corrupts a running dev server
 
 - **Mistake:** ran `npm run build` while `next dev` was serving — twice.

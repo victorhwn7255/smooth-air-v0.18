@@ -2,7 +2,7 @@
  * Lucide icons (lucide.dev, ISC license) inlined as components — the Slock
  * spec names Lucide as its icon library, but this codebase allows no new
  * runtime dependencies, so the three glyphs used are inlined verbatim:
- * plane-takeoff, plane-landing, send.
+ * plane-takeoff, plane-landing, send!
  */
 
 function LucideSvg({
