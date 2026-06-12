@@ -68,3 +68,6 @@ src/lib/data/feedback.json
 #   src/lib/data/       flights, airports, regions, baked corridors = data-as-code
 # If prompts/ ever contains personal notes, ignore those files individually,
 # not the folder.
+
+
+design_handoff_smoothair_slock/
