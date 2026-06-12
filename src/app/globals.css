@@ -44,9 +44,22 @@
   --color-text-secondary: #6b6b6b;
   --color-text-tertiary: #767676;
   --color-disabled: #d4d4d4;
+  --color-surface-alt: #fff4cc;
+  --color-surface-cream: #fdf6e3;
 
   --shadow-*: initial;
   --shadow-brutal: 2px 2px 0px 0px #000000;
+
+  /* skeleton pulse — the sanctioned motion exception (Slock motion spec) */
+  --animate-skel-pulse: skel-pulse 1.2s ease-in-out infinite alternate;
+  @keyframes skel-pulse {
+    from {
+      background-color: var(--color-surface-cream);
+    }
+    to {
+      background-color: var(--color-surface-alt);
+    }
+  }
 }
 
 body {
@@ -56,4 +69,35 @@ body {
 
 ::placeholder {
   color: var(--color-text-tertiary);
+}
+
+/* Route-table wrap: Slock-styled square scrollbar + sticky first column
+   (UX debt #7) — pseudo-element scrollbar styling isn't expressible as
+   Tailwind utilities, so it lives here. */
+.routewrap {
+  overflow-x: auto;
+  scrollbar-color: var(--color-black) var(--color-surface-alt);
+}
+.routewrap::-webkit-scrollbar {
+  height: 12px;
+}
+.routewrap::-webkit-scrollbar-track {
+  background: var(--color-surface-alt);
+  border-top: 2px solid var(--color-black);
+}
+.routewrap::-webkit-scrollbar-thumb {
+  background: var(--color-black);
+}
+.routewrap th:first-child,
+.routewrap td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--color-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
