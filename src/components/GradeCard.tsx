@@ -15,7 +15,12 @@ function ShareButton({ b }: { b: Briefing }) {
     // links improve automatically; the title carries the verdict either way
     const url = window.location.href;
     const title = `${b.flightNo || b.from + "→" + b.to} — ${b.grade.label}`;
-    if (navigator.share) {
+    // DECISION: the native share sheet only on touch devices, where it's the
+    // expected gesture; on desktop the button copies the URL directly —
+    // desktop share dialogs bury "copy", which is what people want there
+    const useSheet =
+      !!navigator.share && window.matchMedia("(pointer: coarse)").matches;
+    if (useSheet) {
       try {
         await navigator.share({ title, url });
         return;

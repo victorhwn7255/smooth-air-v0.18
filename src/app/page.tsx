@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ChangiOutlook, StampLogo } from "@/components/Brand";
 import BriefingProse from "@/components/BriefingProse";
 import FeedbackRow from "@/components/FeedbackRow";
 import FlightForm, { type GenerateParams } from "@/components/FlightForm";
@@ -49,6 +50,41 @@ function openWaterLocator(b: Briefing, i0: number, i1: number): string | undefin
   return undefined;
 }
 
+/**
+ * Featured flights for the landing chips. DECISION: a hand-picked editorial
+ * set (the world's-longest SIN→EWR, SIN→HKG, and the family's flagship
+ * SQ345), not schedule-ranked — these are the recognizable ones for this
+ * app's users. Label is "POPULAR FLIGHTS" (not "FROM CHANGI") because SQ345
+ * arrives at Changi rather than departing it.
+ */
+const FEATURED_FLIGHTS: { no: string; from: string; to: string }[] = [
+  { no: "SQ22", from: "SIN", to: "EWR" },
+  { no: "SQ874", from: "SIN", to: "HKG" },
+  { no: "SQ345", from: "ZRH", to: "SIN" },
+];
+
+function PopularChips({ onPick }: { onPick: (flightNo: string) => void }) {
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-wrap items-center justify-center gap-2.5">
+        <span className="font-mono text-xs font-bold tracking-[0.08em]">
+          POPULAR FLIGHTS:
+        </span>
+        {FEATURED_FLIGHTS.map((p) => (
+          <button
+            key={p.no}
+            type="button"
+            onClick={() => onPick(p.no)}
+            className="min-h-11 cursor-pointer border-2 border-black bg-white px-2.5 py-1 font-mono text-xs font-bold shadow-brutal transition-colors duration-50 hover:bg-pink active:translate-x-[2px] active:translate-y-[2px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+          >
+            {p.no} {p.from}→{p.to}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /** Shared-link params (?flight=… or ?from=&to=&time=, optional &date=). */
 function paramsFromUrl(): GenerateParams | null {
   const sp = new URLSearchParams(window.location.search);
@@ -72,7 +108,22 @@ export default function Home() {
   const [manual, setManual] = useState(false);
   const [stamp, setStamp] = useState("");
 
+  // stale-run guard: bumping the id (new generate, or logo reset) makes any
+  // in-flight request discard its result instead of resurrecting the page
+  const runRef = useRef(0);
+
+  function resetToLanding() {
+    runRef.current++;
+    setBriefing(null);
+    setError(null);
+    setManual(false);
+    setInitialParams(null);
+    setStamp("");
+    window.history.replaceState(null, "", window.location.pathname);
+  }
+
   async function generate(p: GenerateParams) {
+    const runId = ++runRef.current;
     setBusy(true);
     setError(null);
     setBriefing(null);
@@ -82,6 +133,7 @@ export default function Home() {
       );
       const r = await fetch("/api/briefing?" + q);
       const j = await r.json();
+      if (runRef.current !== runId) return; // user left for the landing page
       if (!r.ok) {
         setError(j.error || "Something went wrong.");
         if (r.status === 404) setManual(true);
@@ -103,7 +155,10 @@ export default function Home() {
           }).format(new Date()),
       );
     } catch {
-      setError("Couldn't reach the briefing service — check your connection.");
+      if (runRef.current === runId)
+        setError(
+          "Couldn't reach the briefing service — check your connection.",
+        );
     } finally {
       setBusy(false);
     }
@@ -122,36 +177,72 @@ export default function Home() {
       if (!p.flight) setManual(true);
       generate(p);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, []);
 
   return (
     <>
-      <header className="flex flex-wrap items-center justify-between gap-x-2.5 gap-y-1.5 border-b-2 border-black bg-primary px-5 py-3 max-[640px]:px-3.5 max-[640px]:py-2.5">
-        <div>
-          <span className="inline-block bg-black px-3 py-1 text-xl font-bold text-primary">
-            SMOOTHAIR
-          </span>
-          <span className="ml-2.5 text-xs font-bold uppercase tracking-[0.08em] max-[640px]:ml-0 max-[640px]:block">
-            turbulence briefing · family edition
+      <header className="flex items-center justify-between gap-x-2.5 border-b-2 border-black bg-primary px-5 py-3 max-[640px]:px-3.5 max-[640px]:py-2.5">
+        <div className="flex items-center gap-3.5">
+          {/* the logo is the way home: real link (middle-click works), plain
+              click resets to the landing state without a reload */}
+          <a
+            href="/"
+            aria-label="SmoothAir — back to start"
+            onClick={(e) => {
+              e.preventDefault();
+              resetToLanding();
+            }}
+            className="inline-block cursor-pointer active:translate-x-[2px] active:translate-y-[2px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+          >
+            <StampLogo />
+          </a>
+          <span className="text-lg font-bold uppercase leading-[1.45] tracking-[0.08em]">
+            TURBULENCE
+            <br />
+            BRIEFING
           </span>
         </div>
-        {briefing && (
-          <span className="font-mono text-xs max-[640px]:hidden">{stamp}</span>
-        )}
+        <ChangiOutlook />
       </header>
 
       <main className="mx-auto flex max-w-[880px] flex-col gap-5 px-5 pb-12 pt-6 max-[640px]:px-3.5 max-[640px]:pb-10 max-[640px]:pt-4">
-        {/* key remounts the form when shared-link params land post-mount,
+        {/* key remounts the form when shared-link/chip params land,
             so its useState initializers pick them up */}
-        <FlightForm
-          key={initialParams ? "shared" : "default"}
-          busy={busy}
-          manual={manual}
-          initial={initialParams}
-          onToggleManual={() => setManual(!manual)}
-          onGenerate={generate}
-        />
+        {!briefing && !busy && !error ? (
+          // centered search-engine landing (pre-generate only)
+          <div className="flex min-h-[540px] flex-col items-center justify-center gap-[26px] pb-[50px] pt-[30px] max-[640px]:min-h-[420px] max-[640px]:gap-5 max-[640px]:pb-9 max-[640px]:pt-5">
+            <h1 className="text-center text-[44px] font-bold leading-[1.1] [text-wrap:balance] max-[640px]:text-3xl">
+              Will my flight be bumpy?
+            </h1>
+            <div className="w-full max-w-[580px]">
+              <FlightForm
+                key={initialParams ? JSON.stringify(initialParams) : "default"}
+                busy={busy}
+                manual={manual}
+                initial={initialParams}
+                onToggleManual={() => setManual(!manual)}
+                onGenerate={generate}
+              />
+            </div>
+            <PopularChips
+              onPick={(no) => {
+                const p = { flight: no, date: "" };
+                setInitialParams(p);
+                generate(p);
+              }}
+            />
+          </div>
+        ) : (
+          <FlightForm
+            key={initialParams ? JSON.stringify(initialParams) : "default"}
+            busy={busy}
+            manual={manual}
+            initial={initialParams}
+            onToggleManual={() => setManual(!manual)}
+            onGenerate={generate}
+          />
+        )}
 
         {error && (
           <div
@@ -218,12 +309,9 @@ export default function Home() {
           </>
         )}
 
-        <footer className="border-t-2 border-black pt-4 font-mono text-xs leading-relaxed text-text-secondary">
+        <footer className="border-t-2 border-black pt-4 text-center font-mono text-xs leading-relaxed text-text-secondary">
           <div>
-            Comfort briefing only — not for flight planning or operational use.
-            Forecast skill for turbulence is limited by nature; treat this like
-            a rain forecast, not a promise. Crews see far more than this app
-            and steer around the worst of it.
+            Forecasts for turbulence are limited by nature; treat this like a rain forecast, not for professional flight planning. Pilots see far more than this app and steer around the worst of it.
           </div>
           <div className="mt-2">
             Weather data by{" "}
@@ -233,8 +321,14 @@ export default function Home() {
             >
               Open-Meteo.com
             </a>{" "}
-            (CC BY 4.0) · SIGMETs by aviationweather.gov · Built for the
-            family. v2 · Slock redesign
+            (CC BY 4.0) · SIGMETs by{" "}
+            <a
+              className="font-bold text-black underline transition-colors duration-50 hover:bg-pink"
+              href="https://aviationweather.gov/"
+            >
+              aviationweather.gov
+            </a>
+            {briefing && <> · {stamp}</>}
           </div>
         </footer>
       </main>
