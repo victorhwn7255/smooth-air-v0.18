@@ -1,5 +1,19 @@
 # Change log
 
+## 2026-06-12 — Shareable deep links (URL state)
+
+- page.tsx: successful generates write `?flight=…&date=…` (or `?from=&to=&time=&date=`) via replaceState (DECISION: not pushState — no stale history states); on load, params auto-generate the briefing post-mount (no hydration mismatch) and the form remounts prefilled; manual-route links auto-open manual mode.
+- Share button now sends a real deep link: recipient opens the exact briefing against the live forecast. Dateless links (`?flight=SQ345`) are evergreen next-departure links.
+- Verified (RUN): 43/43 tests, build clean; 7 browser checks — flight + manual deep links auto-generate, form prefill both modes, address-bar sync, share payload contains params, unknown-flight link degrades to honest 404 + manual fallback; zero page errors (hydration fixed by post-mount param read).
+- lessons.md started: build-vs-dev `.next` clobber (bit twice), hydration-safe URL reads, headless navigator.share hang.
+
+## 2026-06-12 — Design update: ribbon pictograms + share button
+
+- `src/components/icons.tsx`: Lucide plane-takeoff / plane-landing / send inlined verbatim (ISC; no new dependency).
+- FlightRibbon: header now `ZRH ✈ · FLIGHT TIMELINE · ✈ SIN` with 16px pictograms; TAKEOFF/LANDING text row removed (owner's call — dep time lives on the grade card).
+- GradeCard: 34px share button top-right (Send icon), `navigator.share({title, url})` with AbortError-aware clipboard fallback + aria-live "Link copied" confirmation; flight-line stack padded so text never collides. DECISION: shares current URL — deep-link params await the URL-state feature.
+- Verified (RUN): 43/43 tests, build clean, compliance greps empty, 7 browser checks (pictograms, no text row, button geometry/inset, no flight-line collision, clipboard fallback, 360px overflow-free); screenshots vs bundle refs 02/06/07/12. Note: headless Chrome's navigator.share hangs forever — test stubs it out to exercise the fallback; real browsers settle the promise.
+
 ## 2026-06-12 — UI redesign (design handoff v2, winners locked)
 
 - Implemented `design_handoff_smoothair_slock/` spec across 8 components, one commit each: tokens (surface-alt/cream, skel-pulse keyframes, routewrap scrollbar CSS, reduced-motion guard), FlightForm (flex controls, separated statement/unverified lines with ONE affordance each, change-date reveal), page (notice roles, working skeleton, open-water locator derivation), GradeCard (stacked flight line, sub-line, departed chip), FlightRibbon (numbered bands + flow legend, ticks retired), ZoneCard (numbered, open-water presentation), RouteTable (sticky first col + square scrollbar), FeedbackRow (locked copy), error.tsx.

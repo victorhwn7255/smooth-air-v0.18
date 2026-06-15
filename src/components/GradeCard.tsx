@@ -1,7 +1,59 @@
+"use client";
+
+import { useState } from "react";
 import type { Briefing } from "@/lib/types";
+import { SendIcon } from "./icons";
 
 const chip =
   "inline-block whitespace-nowrap border-2 border-black px-2.5 py-0.5 text-xs font-bold";
+
+function ShareButton({ b }: { b: Briefing }) {
+  const [copied, setCopied] = useState(false);
+
+  async function share() {
+    // DECISION: share the page's current URL — when URL-state lands, deep
+    // links improve automatically; the title carries the verdict either way
+    const url = window.location.href;
+    const title = `${b.flightNo || b.from + "→" + b.to} — ${b.grade.label}`;
+    // DECISION: the native share sheet only on touch devices, where it's the
+    // expected gesture; on desktop the button copies the URL directly —
+    // desktop share dialogs bury "copy", which is what people want there
+    const useSheet =
+      !!navigator.share && window.matchMedia("(pointer: coarse)").matches;
+    if (useSheet) {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch (e) {
+        // user dismissed the sheet → done; anything else → copy instead
+        if ((e as DOMException).name === "AbortError") return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* clipboard unavailable — the button did its best */
+    }
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={share}
+      aria-label="Share this briefing"
+      className={`absolute right-3 top-3 flex h-[34px] w-[34px] cursor-pointer items-center justify-center border-2 border-black transition-colors duration-50 hover:bg-surface-alt active:translate-x-[2px] active:translate-y-[2px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink ${
+        copied ? "bg-surface-alt" : "bg-white"
+      }`}
+    >
+      <SendIcon />
+      <span aria-live="polite" className="sr-only">
+        {copied ? "Link copied" : ""}
+      </span>
+    </button>
+  );
+}
 
 export default function GradeCard({ b }: { b: Briefing }) {
   const dash = b.grade.label.indexOf("—");
@@ -25,9 +77,10 @@ export default function GradeCard({ b }: { b: Briefing }) {
   return (
     <section
       aria-live="polite"
-      className="border-2 border-black bg-white p-4 shadow-brutal"
+      className="relative border-2 border-black bg-white p-4 shadow-brutal"
     >
-      <div className="mb-3 flex flex-col gap-0.5">
+      <ShareButton b={b} />
+      <div className="mb-3 flex flex-col gap-0.5 pr-11">
         <span className="font-mono text-lg font-bold">
           {b.flightNo || "Route"} {b.from} → {b.to}
         </span>

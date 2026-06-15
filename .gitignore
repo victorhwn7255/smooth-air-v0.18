@@ -72,3 +72,5 @@ src/lib/data/feedback.json
 
 design_handoff_smoothair_slock/
 tasks/
+prompts/
+references/

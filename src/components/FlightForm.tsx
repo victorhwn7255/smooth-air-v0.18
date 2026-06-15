@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  AIRPORTS,
-  CURATED_FLIGHT_NOS,
-  FLIGHTS,
-  GENERATED_FLIGHT_COUNT,
-} from "@/lib/data/flightDb";
+import { AIRPORTS, FLIGHTS } from "@/lib/data/flightDb";
 import { nextDeparture } from "@/lib/pipeline/timing";
 import type { FlightEntry } from "@/lib/types";
 
@@ -18,14 +13,6 @@ export interface GenerateParams {
   date: string;
 }
 
-const fmtDate = (iso: string) =>
-  new Intl.DateTimeFormat("en-GB", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-  }).format(new Date(iso + "T12:00:00Z"));
-
 const labelCls =
   "flex flex-col gap-1.5 text-xs font-bold uppercase tracking-[0.08em]";
 const inputCls =
@@ -36,21 +23,26 @@ const ghostCls =
 export default function FlightForm({
   busy,
   manual,
+  initial,
   onToggleManual,
   onGenerate,
 }: {
   busy: boolean;
   manual: boolean;
+  /** shared-link params — prefill the form so it mirrors the briefing */
+  initial?: GenerateParams | null;
   onToggleManual: () => void;
   onGenerate: (p: GenerateParams) => void;
 }) {
-  const [raw, setRaw] = useState("SQ345");
+  const [raw, setRaw] = useState(initial?.flight ?? "SQ345");
   const [dateOpen, setDateOpen] = useState(false);
-  const [dateOverride, setDateOverride] = useState("");
-  const [mFrom, setMFrom] = useState("SIN");
-  const [mTo, setMTo] = useState("ZRH");
-  const [mTime, setMTime] = useState("11:40");
-  const [mDate, setMDate] = useState("");
+  const [dateOverride, setDateOverride] = useState(
+    initial?.flight ? (initial.date ?? "") : "",
+  );
+  const [mFrom, setMFrom] = useState(initial?.from ?? "SIN");
+  const [mTo, setMTo] = useState(initial?.to ?? "ZRH");
+  const [mTime, setMTime] = useState(initial?.time ?? "11:40");
+  const [mDate, setMDate] = useState(initial?.from ? (initial.date ?? "") : "");
 
   const fno = raw.replace(/\s+/g, "").toUpperCase();
   const flight = FLIGHTS[fno];
@@ -121,55 +113,39 @@ export default function FlightForm({
           disabled={busy}
           className="cursor-pointer border-2 border-black bg-cyan px-4 py-1.5 text-xl font-bold shadow-brutal transition-colors duration-50 hover:bg-pink active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:cursor-wait disabled:bg-disabled disabled:active:translate-x-0 disabled:active:translate-y-0 disabled:active:shadow-brutal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink max-[640px]:basis-full"
         >
-          {busy ? "Working…" : "Generate briefing"}
+          {busy ? "Checking…" : "Smooth or Bumpy?"}
         </button>
       </div>
 
-      <div className="mt-2.5 font-mono text-xs text-text-secondary">
-        Knows: {CURATED_FLIGHT_NOS.join(", ")}
-        {GENERATED_FLIGHT_COUNT > 0 &&
-          ` + ${GENERATED_FLIGHT_COUNT.toLocaleString()} observed Changi flights`}{" "}
-        ·{" "}
+      <div className="mt-4 font-mono text-xs text-text-secondary">
+        Covers over 1000+ flights in and out of Singapore Changi Airport · or
+        you can{" "}
         <button type="button" className={ghostCls} onClick={onToggleManual}>
           enter a route manually
         </button>
       </div>
 
-      {!manual && flight && nextDep && (
-        <div>
-          {/* next-departure statement — separate line, ONE affordance */}
-          <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t-2 border-black pt-3 text-lg">
-            <span>
-              Next departure: <b className="whitespace-nowrap">{fmtDate(date)}, {flight.depLocal} from {AIRPORTS[flight.from].city}</b>
+      {/* the verified-flight "Next departure / change date" row was removed
+          (owner's call) — departure surfaces on the grade card; the
+          unverified warning stays as a safety affordance */}
+      {!manual && flight && nextDep && flight.verified === false && (
+        <div className="mt-3 border-t-2 border-black pt-3">
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            <span className="inline-block whitespace-nowrap border-2 border-black bg-warning px-2.5 py-0.5 text-xs font-bold">
+              SCHEDULE UNVERIFIED
             </span>
-            {flight.verified !== false && !dateOpen && (
+            <span>departs {flight.depLocal} — still right?</span>
+            {/* DECISION: one affordance serves both confirm and change */}
+            {!dateOpen && (
               <button
                 type="button"
                 className={ghostCls}
                 onClick={() => setDateOpen(true)}
               >
-                change date
+                confirm or change date
               </button>
             )}
           </div>
-          {flight.verified === false && (
-            <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
-              <span className="inline-block whitespace-nowrap border-2 border-black bg-warning px-2.5 py-0.5 text-xs font-bold">
-                SCHEDULE UNVERIFIED
-              </span>
-              <span>departs {flight.depLocal} — still right?</span>
-              {/* DECISION: one affordance serves both confirm and change */}
-              {!dateOpen && (
-                <button
-                  type="button"
-                  className={ghostCls}
-                  onClick={() => setDateOpen(true)}
-                >
-                  confirm or change date
-                </button>
-              )}
-            </div>
-          )}
           {dateOpen && (
             <label className={`${labelCls} mt-2.5 max-w-[220px]`}>
               Departure date
